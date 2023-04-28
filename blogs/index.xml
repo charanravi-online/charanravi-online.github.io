@@ -9,28 +9,15 @@
       <link>https://charanravi-online.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 08 Apr 2022 23:15:00 +0700</lastBuildDate><atom:link href="https://charanravi-online.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://charanravi-online.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How to master Streamlit for Data Science</title>
-      <link>https://charanravi-online.github.io/blogs/how-to-master-streamlit-for-data-science/</link>
-      <pubDate>Fri, 08 Apr 2022 23:15:00 +0700</pubDate>
+      <title>12 Rules For Life</title>
+      <link>https://charanravi-online.github.io/blogs/12-rules-for-life/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://charanravi-online.github.io/blogs/how-to-master-streamlit-for-data-science/</guid>
-      <description>Preview The essential Streamlit for all your data science needs To build a web app you’d typically use such Python web frameworks as Django and Flask. But the steep learning curve and the big time investment for implementing these apps present a major hurdle.
-Streamlit makes the app creation process as simple as writing Python scripts!
-In this article, you’ll learn how to master Streamlit when getting started with data science.</description>
-    </item>
-    
-    <item>
-      <title>What Is Bioinformatics</title>
-      <link>https://charanravi-online.github.io/blogs/what-is-bioinformatics/</link>
-      <pubDate>Sun, 03 Apr 2022 23:15:00 +0700</pubDate>
-      
-      <guid>https://charanravi-online.github.io/blogs/what-is-bioinformatics/</guid>
-      <description>Introduction So you probably have heard of the term Bioinformatics before, but did not get the chance to learn more about what it is and what it can do.
-In this article, I will be giving you a brief high-level overview of this exciting field of Bioinformatics. Thus, the article will be comprehensible to those coming from biology or computer backgrounds alike.
-As a biologist, I have self-taught myself data science and coding (R and Python) after several years of persistence (initially quitting a couple of times the coding concept just kind of clicked at some point in time).</description>
+      <guid>https://charanravi-online.github.io/blogs/12-rules-for-life/</guid>
+      <description>12 rules for life &amp;ldquo;12 Rules for Life: An Antidote to Chaos&amp;rdquo; is a self-help book written by Canadian clinical psychologist and professor, Jordan Peterson. The book provides a set of principles for navigating life&amp;rsquo;s challenges and achieving a sense of purpose and fulfillment.
+The book is divided into twelve chapters, each of which contains a specific rule for life. These rules include &amp;ldquo;Stand up straight with your shoulders back,&amp;rdquo; &amp;ldquo;Treat yourself like someone you are responsible for helping,&amp;rdquo; and &amp;ldquo;Tell the truth, or at least don&amp;rsquo;t lie.</description>
     </item>
     
   </channel>

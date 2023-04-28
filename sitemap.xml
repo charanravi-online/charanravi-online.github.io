@@ -2,35 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://charanravi-online.github.io/about/</loc>
-    <lastmod>2022-04-09T23:15:00+07:00</lastmod>
-  </url><url>
-    <loc>https://charanravi-online.github.io/music/</loc>
-    <lastmod>2022-04-09T23:15:00+07:00</lastmod>
-  </url><url>
-    <loc>https://charanravi-online.github.io/blogs/</loc>
-    <lastmod>2022-04-08T23:15:00+07:00</lastmod>
-  </url><url>
     <loc>https://charanravi-online.github.io/</loc>
-    <lastmod>2022-04-08T23:15:00+07:00</lastmod>
-  </url><url>
-    <loc>https://charanravi-online.github.io/blogs/how-to-master-streamlit-for-data-science/</loc>
-    <lastmod>2022-04-08T23:15:00+07:00</lastmod>
-  </url><url>
-    <loc>https://charanravi-online.github.io/projects/</loc>
-    <lastmod>2022-04-06T23:15:00+07:00</lastmod>
-  </url><url>
-    <loc>https://charanravi-online.github.io/projects/reproducible-computational-drug-discovery/</loc>
-    <lastmod>2022-04-06T23:15:00+07:00</lastmod>
-  </url><url>
-    <loc>https://charanravi-online.github.io/projects/erpred/</loc>
-    <lastmod>2022-04-05T23:15:00+07:00</lastmod>
-  </url><url>
-    <loc>https://charanravi-online.github.io/projects/acetylcholinesterase/</loc>
-    <lastmod>2022-04-04T23:15:00+07:00</lastmod>
-  </url><url>
-    <loc>https://charanravi-online.github.io/blogs/what-is-bioinformatics/</loc>
-    <lastmod>2022-04-03T23:15:00+07:00</lastmod>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://charanravi-online.github.io/tags/first/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
@@ -41,6 +14,22 @@
     <loc>https://charanravi-online.github.io/tags/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url><url>
+    <loc>https://charanravi-online.github.io/blogs/12-rules-for-life/</loc>
+  </url><url>
+    <loc>https://charanravi-online.github.io/about/</loc>
+  </url><url>
+    <loc>https://charanravi-online.github.io/blogs/</loc>
+  </url><url>
     <loc>https://charanravi-online.github.io/categories/</loc>
+  </url><url>
+    <loc>https://charanravi-online.github.io/projects/erpred/</loc>
+  </url><url>
+    <loc>https://charanravi-online.github.io/music/</loc>
+  </url><url>
+    <loc>https://charanravi-online.github.io/projects/acetylcholinesterase/</loc>
+  </url><url>
+    <loc>https://charanravi-online.github.io/projects/</loc>
+  </url><url>
+    <loc>https://charanravi-online.github.io/projects/reproducible-computational-drug-discovery/</loc>
   </url>
 </urlset>
