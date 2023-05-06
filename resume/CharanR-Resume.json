@@ -1,0 +1,599 @@
+{
+    "basics": {
+        "name": "Charan R",
+        "email": "charanravi.online@gmail.com",
+        "phone": "+91 8971297535",
+        "photo": {
+            "url": "",
+            "filters": {
+                "size": 128,
+                "shape": "rounded-square",
+                "border": false,
+                "grayscale": false
+            },
+            "visible": true
+        },
+        "summary": "Experienced Embedded Software Test Engineer skilled in manual and automated testing. Proficient in Python programming with an interest in AI, machine learning, and data analysis. Thrives in challenging environments and seeks to use technical skills to drive innovation and achieve business objectives.",
+        "website": "charanravi-online.github.io/",
+        "headline": "Results-Driven Embedded Software Test Engineer with a Passion for Learning and Developing Skills in AI and Data Science",
+        "location": {
+            "city": "Bangalore",
+            "region": "Karnataka",
+            "address": "#5 8th main 6th cross GM Palya north Extension",
+            "country": "India",
+            "postalCode": "560075"
+        },
+        "profiles": [
+            {
+                "id": "4df61ffc-e48b-43f1-9434-add35d9cb155",
+                "url": "https://github.com/charanravi-online",
+                "network": "GitHub",
+                "username": "charanravi-online"
+            },
+            {
+                "id": "2fe3d662-6ad8-4fb4-a372-0ed79b8e59c0",
+                "url": "https://www.linkedin.com/in/r-charan/",
+                "network": "LinkedIn",
+                "username": "r-charan"
+            }
+        ],
+        "birthdate": "2000-05-02"
+    },
+    "sections": {
+        "work": {
+            "id": "work",
+            "name": "Work Experience",
+            "type": "basic",
+            "items": [
+                {
+                    "id": "fe280c61-9d92-4dba-8a08-274866470096",
+                    "url": "https://github.com/webosose/build-webos/releases/tag/v2.20.1",
+                    "date": {
+                        "end": "",
+                        "start": "2021-10-01"
+                    },
+                    "name": "LG Soft India",
+                    "summary": "- Spearheaded the allocation, coordination, and management of a team to successfully release webOS OSE v2.20.1, ensuring project completion within established timelines and meeting all quality standards.\n- Contributed to the development of a comprehensive and clear test case for smoke testing on the Apollo project, resulting in more efficient and effective testing and overall project success.",
+                    "position": "Software Test Engineer"
+                }
+            ],
+            "columns": 1,
+            "visible": true
+        },
+        "awards": {
+            "id": "awards",
+            "name": "Awards",
+            "type": "basic",
+            "items": [
+                {
+                    "id": "657cadb0-c07d-4a35-8351-9079598c7ac0",
+                    "url": "https://github.com/users/charanravi-online/achievements/pull-shark",
+                    "date": "2023-05-05",
+                    "title": "Pull Shark",
+                    "awarder": "GitHub",
+                    "summary": "Certified \"Pull Shark\" by GitHub for submitting high-quality pull requests and demonstrating strong collaboration skills within the open-source community."
+                }
+            ],
+            "columns": 1,
+            "visible": true
+        },
+        "skills": {
+            "id": "skills",
+            "name": "Skills",
+            "type": "basic",
+            "items": [
+                {
+                    "id": "e27660b2-2b0f-48b0-9b04-3597f0282d06",
+                    "name": "Frontend Web Development",
+                    "level": "Expert",
+                    "keywords": [
+                        "ReactJS",
+                        "HTML/CSS",
+                        "jQuery",
+                        "PHP"
+                    ],
+                    "levelNum": 10
+                },
+                {
+                    "id": "2f98e07e-21f7-4b40-81e3-4cf529d43339",
+                    "name": "Backend Development",
+                    "level": "Novice",
+                    "keywords": [
+                        "NodeJS",
+                        "Springboot",
+                        "Python/Flask",
+                        "Postman"
+                    ],
+                    "levelNum": 8
+                },
+                {
+                    "id": "bf4253f2-7829-432c-a1d5-07446e7ae873",
+                    "name": "Adobe Creative Cloud",
+                    "level": "Novice",
+                    "keywords": [
+                        "Photoshop",
+                        "Illustrator",
+                        "InDesign",
+                        "Fireworks"
+                    ],
+                    "levelNum": 8
+                },
+                {
+                    "id": "0b4a6206-7a2b-47a4-b71d-59c24ceee219",
+                    "name": "Content Management Systems",
+                    "level": "Intermediate",
+                    "keywords": [
+                        "Wordpress",
+                        "Joomla",
+                        "Mailchimp"
+                    ],
+                    "levelNum": 6
+                }
+            ],
+            "columns": 2,
+            "visible": false
+        },
+        "projects": {
+            "id": "projects",
+            "name": "Projects",
+            "type": "basic",
+            "items": [
+                {
+                    "id": "b5d959a8-c3c0-4f28-84f9-6b49519bd135",
+                    "url": "https://github.com/charanravi-online/Terminal-Wiki",
+                    "date": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "name": "Terminal-Wiki",
+                    "summary": "- Developed a Python-based CLI tool for searching and viewing Wikipedia articles from the terminal, utilizing the Wikipedia API for efficient article retrieval.\n- Designed an intuitive UI with summary-only mode for quick reference, showcasing problem-solving skills and attention to detail.\n- Collaborated with community members by accepting contributions and actively addressing issues raised in the project's issue tracker, demonstrating teamwork and communication skills.",
+                    "keywords": [],
+                    "description": "Wikipedia from your Terminal."
+                },
+                {
+                    "id": "fce80226-96d4-42da-82f8-5e387a7d5a4d",
+                    "url": "https://github.com/bitkarrot/satsconverter",
+                    "date": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "name": "BTC Converter",
+                    "summary": "- Contributed to the development of the \"SatsConverter\" repository on GitHub, a Python-based CLI tool for converting Bitcoin amounts between satoshis and standard BTC units.\n- Demonstrated strong UX design skills by developing a simple and intuitive user interface that allows for quick and easy conversions.\n- The project is deployed and is available at - [https://rates.bitcoin.org.hk/](https://rates.bitcoin.org.hk/)",
+                    "keywords": [],
+                    "description": "A Basic Bitcoin to Fiat converter"
+                }
+            ],
+            "columns": 1,
+            "visible": true
+        },
+        "education": {
+            "id": "education",
+            "name": "Education",
+            "type": "basic",
+            "items": [
+                {
+                    "id": "3f0eded8-ee1f-4c0e-b4a7-7a0811c150db",
+                    "url": "https://www.msrcasc.edu.in/",
+                    "area": "Computer Science",
+                    "date": {
+                        "end": "2021-07-08",
+                        "start": "2018-08-08"
+                    },
+                    "score": "8.7",
+                    "degree": "Batchelor's Degree in Computer Applications",
+                    "courses": [],
+                    "summary": "",
+                    "institution": "MS Ramaiah College of Arts, Science and Commerce"
+                }
+            ],
+            "columns": 1,
+            "visible": true
+        },
+        "interests": {
+            "id": "interests",
+            "name": "Interests",
+            "type": "basic",
+            "items": [
+                {
+                    "id": "ddebb0e1-0a49-4ca6-be8a-956f10f62307",
+                    "name": "Machine Learning & AI",
+                    "keywords": [
+                        "Ethical AI to help humanity"
+                    ]
+                },
+                {
+                    "id": "2df59b01-8dde-40d5-b3da-f5f5e698e8fa",
+                    "name": "Building/Contributing to OpenSource projects",
+                    "keywords": [
+                        "Open Source is the future!"
+                    ]
+                },
+                {
+                    "id": "dc1bb429-1baf-4a0c-80ba-4d7a24f66e52",
+                    "name": "Tech News",
+                    "keywords": [
+                        "Keeping myself up to date with the latest Tech"
+                    ]
+                },
+                {
+                    "id": "9939e616-9f03-4ec0-bb8e-25183925c7fc",
+                    "name": "Music Composition",
+                    "keywords": [
+                        "Compose/Produce music and scores"
+                    ]
+                }
+            ],
+            "columns": 2,
+            "visible": true
+        },
+        "languages": {
+            "id": "languages",
+            "name": "Languages",
+            "type": "basic",
+            "items": [
+                {
+                    "id": "dd9eb2b8-2956-463b-b0b1-0ffef84f9fc2",
+                    "name": "English",
+                    "level": "Native",
+                    "levelNum": 10
+                },
+                {
+                    "id": "6cf99d85-4efc-4ff8-9a7f-e76abd2d2857",
+                    "name": "German",
+                    "level": "B1 (Intermediate)",
+                    "levelNum": 6
+                }
+            ],
+            "columns": 2,
+            "visible": false
+        },
+        "volunteer": {
+            "id": "volunteer",
+            "name": "Volunteer Experience",
+            "type": "basic",
+            "items": [],
+            "columns": 2,
+            "visible": true
+        },
+        "references": {
+            "id": "references",
+            "name": "References",
+            "type": "basic",
+            "items": [
+                {
+                    "id": "5a114a83-b62c-4b90-a0ef-1ab5516dc0dd",
+                    "name": "Cindy J. Helmer",
+                    "email": "cindyjh@joupide.com",
+                    "phone": "916-609-9531",
+                    "summary": "Lorem ipsum dolor sit amet, **consectetur adipiscing elit.** Nam scelerisque ac metus sit amet tempor. Sed luctus dui fermentum aliquet dapibus.",
+                    "relationship": "CEO/Founder, Copy.ai"
+                },
+                {
+                    "id": "d866c929-4132-4dab-81c3-8dfcb33f5c0a",
+                    "name": "Keisha Whaley",
+                    "email": "keishawhaley@aws.de",
+                    "phone": "978-584-6675",
+                    "summary": "Morbi a elit semper arcu tempor porta. _Sed tristique eu turpis vitae ultrices._ ~Nullam nec quam~ ac diam eleifend fringilla. Sed congue magna at ante bibendum posuere.",
+                    "relationship": "Solutions Architect, AWS"
+                }
+            ],
+            "columns": 2,
+            "visible": false
+        },
+        "publications": {
+            "id": "publications",
+            "name": "Publications",
+            "type": "basic",
+            "items": [],
+            "columns": 2,
+            "visible": true
+        },
+        "certifications": {
+            "id": "certifications",
+            "name": "Certifications",
+            "type": "basic",
+            "items": [
+                {
+                    "id": "7de8f5a1-ad78-46b2-b436-c76a58cda299",
+                    "url": "https://coursera.com",
+                    "date": "",
+                    "name": "Crash Course on Python",
+                    "issuer": "Coursera",
+                    "summary": ""
+                },
+                {
+                    "id": "75b87dcb-56ef-498d-bd26-a7d646bec914",
+                    "url": "https://www.codecademy.com/learn/paths/software-engineering-for-data-scientists",
+                    "date": "",
+                    "name": "Software Engineering for Data Scientists",
+                    "issuer": "Codecademy (In Progress)",
+                    "summary": ""
+                },
+                {
+                    "id": "d1057a6c-c2b2-436f-9166-9e17ae591e71",
+                    "url": "https://www.codecademy.com/learn/paths/build-python-web-apps-with-django",
+                    "date": "",
+                    "name": "Build Python Web Apps with Django",
+                    "issuer": "Codecademy (In Progress)",
+                    "summary": ""
+                },
+                {
+                    "id": "44fc2443-b6fc-4c39-8e29-55884cb2b8d0",
+                    "url": "https://learn.microsoft.com/en-us/certifications/exams/ai-900/",
+                    "date": "",
+                    "name": "Microsoft Azure AI Fundamentals",
+                    "issuer": "Microsoft (In Progress)",
+                    "summary": ""
+                }
+            ],
+            "columns": 2,
+            "visible": true
+        },
+        "2d47a563-d0a0-4275-af18-fea3ba6b57b4": {
+            "name": "Soft Skills",
+            "type": "custom",
+            "items": [
+                {
+                    "id": "bcd19f25-b015-4532-b555-dbcc6f556661",
+                    "url": "",
+                    "date": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "level": "",
+                    "title": "Leadership",
+                    "summary": "- Collaboration\n- Communication",
+                    "keywords": [],
+                    "levelNum": 0,
+                    "subtitle": ""
+                },
+                {
+                    "id": "e6fde8df-dcc8-4481-b872-2c298e7a3bbf",
+                    "url": "",
+                    "date": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "level": "",
+                    "title": "Creativity",
+                    "summary": "- Critical Thinking\n- Visual Thinking",
+                    "keywords": [],
+                    "levelNum": 0,
+                    "subtitle": ""
+                },
+                {
+                    "id": "888db537-bed2-4d4d-901b-2c7f905f0464",
+                    "url": "",
+                    "date": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "level": "",
+                    "title": "Problem Solving",
+                    "summary": "- Data Structures & Algorithms",
+                    "keywords": [],
+                    "levelNum": 0,
+                    "subtitle": ""
+                },
+                {
+                    "id": "74b9984e-4f0f-4db3-bdc8-fddb647b8df8",
+                    "url": "",
+                    "date": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "level": "",
+                    "title": "Organization Skills",
+                    "summary": "- Work Ethic\n- Enthusiasm\n- Supervision",
+                    "keywords": [],
+                    "levelNum": 0,
+                    "subtitle": ""
+                }
+            ],
+            "columns": 4,
+            "visible": true
+        },
+        "b0921892-9a4c-40ff-9cc4-d189e3a31f2a": {
+            "name": "Languages",
+            "type": "custom",
+            "items": [
+                {
+                    "id": "d675047e-11d4-411a-b775-8182635d9e58",
+                    "url": "",
+                    "date": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "level": "",
+                    "title": "English",
+                    "summary": "Native proficiency (reading, writing, speaking, and listening)",
+                    "keywords": [],
+                    "levelNum": 0,
+                    "subtitle": ""
+                },
+                {
+                    "id": "ec6f4fb3-54d3-4f20-af62-4a322c8aa971",
+                    "url": "",
+                    "date": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "level": "",
+                    "title": "Hindi",
+                    "summary": "Professional proficiency (reading, writing, speaking, and listening)",
+                    "keywords": [],
+                    "levelNum": 0,
+                    "subtitle": ""
+                },
+                {
+                    "id": "087139f5-04b7-42a3-bd14-bd17d12ca2eb",
+                    "url": "",
+                    "date": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "level": "",
+                    "title": "Tamil",
+                    "summary": "Conversational proficiency (speaking and listening)",
+                    "keywords": [],
+                    "levelNum": 0,
+                    "subtitle": ""
+                },
+                {
+                    "id": "58201197-8b10-47ef-a14f-a2fcada9cec0",
+                    "url": "",
+                    "date": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "level": "",
+                    "title": "Telugu",
+                    "summary": "Conversational proficiency (speaking and listening)",
+                    "keywords": [],
+                    "levelNum": 0,
+                    "subtitle": ""
+                },
+                {
+                    "id": "e0016f20-0861-4d74-8052-882e0595539c",
+                    "url": "",
+                    "date": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "level": "",
+                    "title": "Kannada",
+                    "summary": "Conversational proficiency (speaking and listening)",
+                    "keywords": [],
+                    "levelNum": 0,
+                    "subtitle": ""
+                }
+            ],
+            "columns": 2,
+            "visible": false
+        },
+        "bb5c7b72-efbe-4f8a-aecf-d636d4ce6ec5": {
+            "name": "Languages & Tools",
+            "type": "custom",
+            "items": [
+                {
+                    "id": "70cec051-1b11-4075-b987-6763c35ee246",
+                    "url": "",
+                    "date": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "level": "",
+                    "title": "Frameworks",
+                    "summary": "- Django \n- Flutter\n- Hugo\n- Selenium\n- Flask",
+                    "keywords": [],
+                    "levelNum": 0,
+                    "subtitle": ""
+                },
+                {
+                    "id": "fd36dd86-e747-4579-b0b5-924f7251a0b8",
+                    "url": "",
+                    "date": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "level": "",
+                    "title": "Languages",
+                    "summary": "- Python\n- Bash\n- HTML/CSS\n- Dart\n- JavaScript\n- C & C++",
+                    "keywords": [],
+                    "levelNum": 0,
+                    "subtitle": ""
+                },
+                {
+                    "id": "f3f2b20d-a7d7-4d75-b147-4cb5301b1b09",
+                    "url": "",
+                    "date": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "level": "",
+                    "title": "Tools",
+                    "summary": "- Jenkins\n- Firebase & MySQL\n- Git\n- Linode\n- Azure\n- Notion\n- FL Studio & Ableton",
+                    "keywords": [],
+                    "levelNum": 0,
+                    "subtitle": ""
+                },
+                {
+                    "id": "8b17ea95-8b1d-4910-841f-84f9c170f9b2",
+                    "url": "",
+                    "date": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "level": "",
+                    "title": "OS",
+                    "summary": "- Windows 10 & 11\n- Ubuntu V22\n- Arch Linux V6\n- Raspberry Pi OS\n- webOS OSE",
+                    "keywords": [],
+                    "levelNum": 0,
+                    "subtitle": ""
+                }
+            ],
+            "columns": 4,
+            "visible": true
+        }
+    },
+    "metadata": {
+        "css": {
+            "value": "/* Enter custom CSS here */\n\n* {\n    outline: 1px solid #000;\n}",
+            "visible": false
+        },
+        "date": {
+            "format": "MMMM DD, YYYY"
+        },
+        "theme": {
+            "text": "#000000",
+            "primary": "#1682cf",
+            "background": "#ffffff"
+        },
+        "layout": [
+            [
+                [
+                    "work",
+                    "projects",
+                    "bb5c7b72-efbe-4f8a-aecf-d636d4ce6ec5"
+                ],
+                [
+                    "publications",
+                    "volunteer"
+                ]
+            ],
+            [
+                [
+                    "education",
+                    "2d47a563-d0a0-4275-af18-fea3ba6b57b4",
+                    "awards",
+                    "b0921892-9a4c-40ff-9cc4-d189e3a31f2a"
+                ],
+                [
+                    "certifications",
+                    "interests",
+                    "languages"
+                ]
+            ],
+            [
+                [],
+                [
+                    "skills",
+                    "references"
+                ]
+            ]
+        ],
+        "locale": "en",
+        "template": "onyx",
+        "typography": {
+            "size": {
+                "body": 13,
+                "heading": 31
+            },
+            "family": {
+                "body": "Open Sans",
+                "heading": "Open Sans"
+            }
+        }
+    },
+    "public": true
+}
