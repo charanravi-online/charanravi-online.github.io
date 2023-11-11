@@ -13,13 +13,13 @@
             },
             "visible": true
         },
-        "summary": "Experienced Embedded Software Test Engineer skilled in manual and automated testing. Proficient in Python programming with an interest in AI, machine learning, and data analysis. Thrives in challenging environments and seeks to use technical skills to drive innovation and achieve business objectives.",
+        "summary": "Experienced Developer, Automation Test Engineer skilled in manual and automated testing (ISTQB Certified). Proficient in Python programming with an interest in AI, machine learning, and data analysis.",
         "website": "charanravi-online.github.io/",
-        "headline": "Results-Driven Embedded Software Test Engineer with a Passion for Learning and Developing Skills in AI and Data Science",
+        "headline": "AI QA & Developer",
         "location": {
             "city": "Bangalore",
             "region": "Karnataka",
-            "address": "#5 8th main 6th cross GM Palya north Extension",
+            "address": "",
             "country": "India",
             "postalCode": "560075"
         },
@@ -47,14 +47,36 @@
             "items": [
                 {
                     "id": "fe280c61-9d92-4dba-8a08-274866470096",
-                    "url": "https://github.com/webosose/build-webos/",
+                    "url": "",
                     "date": {
                         "end": "",
                         "start": "2021-10-01"
                     },
-                    "name": "LG Soft India",
-                    "summary": "- Spearheaded the allocation, coordination, and management of a team to successfully release [webOS OSE v2.20.1](https://github.com/webosose/build-webos/releases/tag/v2.20.1), ensuring project completion within established timelines and meeting all quality standards.\n- Contributed to the development of a comprehensive and clear test case for smoke testing on the Apollo project, resulting in more efficient and effective testing and overall project success.",
-                    "position": "Software Test Engineer"
+                    "name": "• LG Soft India",
+                    "summary": "- Spearheaded the allocation, coordination, and management of a team to successfully release [webOS OSE v2.20.1](https://github.com/webosose/build-webos/releases/tag/v2.20.1), ensuring project completion within established timelines and meeting all quality standards. Achieved a 98% on-time project completion rate.\n- Played a key role in the Development of the internal AI testing tool (AITS)",
+                    "position": "Engineer"
+                },
+                {
+                    "id": "9699846b-fa13-408d-928b-bd2b29113cf1",
+                    "url": "https://www.bitcoin.org.hk/",
+                    "date": {
+                        "end": "2023-09-14",
+                        "start": "2023-04-13"
+                    },
+                    "name": "• The Bitcoin Association of Hong Kong (Freelance)",
+                    "summary": "As a freelance developer at The Bitcoin Association of Hong Kong, I played a pivotal role in the development and enhancement of the Open Source SatsConverter website which resulted in a 40% increase in user engagement ",
+                    "position": "Software Developer"
+                },
+                {
+                    "id": "06c5df8c-2a5c-4bf8-b9c2-32c8711bf25f",
+                    "url": "https://plebnet.dev/",
+                    "date": {
+                        "end": "",
+                        "start": "2023-09-15"
+                    },
+                    "name": "• PLEBNET (Freelance)",
+                    "summary": "As a freelance developer at Plebnet.dev, I have been actively contributing to projects aimed at enhancing the Bitcoin ecosystem. ",
+                    "position": "Software Developer"
                 }
             ],
             "columns": 1,
@@ -146,19 +168,19 @@
                         "start": ""
                     },
                     "name": "Terminal-Wiki",
-                    "summary": "- Developed a Python-based CLI tool for searching and viewing Wikipedia articles from the terminal, utilizing the Wikipedia API for efficient article retrieval.\n- Designed an intuitive UI with summary-only mode for quick reference, showcasing problem-solving skills and attention to detail.\n- Collaborated with community members by accepting contributions and actively addressing issues raised in the project's issue tracker, demonstrating teamwork and communication skills.",
+                    "summary": "- Developed a Python-based CLI tool for searching and viewing Wikipedia articles from the terminal, utilising the Wikipedia API for efficient article retrieval.\n- Collaborated with community members by accepting contributions and actively reviewed code merges",
                     "keywords": [],
                     "description": "Wikipedia from your Terminal."
                 },
                 {
                     "id": "fce80226-96d4-42da-82f8-5e387a7d5a4d",
-                    "url": "https://github.com/bitkarrot/satsconverter",
+                    "url": "https://rates.bitcoin.org.hk/",
                     "date": {
                         "end": "",
                         "start": ""
                     },
                     "name": "BTC Converter",
-                    "summary": "- Contributed to the development of the \"SatsConverter\" repository on GitHub, a Python-based CLI tool for converting Bitcoin amounts between satoshis and standard BTC units.\n- Demonstrated strong UX design skills by developing a simple and intuitive user interface that allows for quick and easy conversions.\n- The project is deployed and is available at - [https://rates.bitcoin.org.hk/](https://rates.bitcoin.org.hk/)",
+                    "summary": "- Contributed to the development of the \"SatsConverter\" repository on GitHub.\n- Demonstrated strong UX design skills by developing a simple and intuitive user interface that allows for quick and easy conversions.",
                     "keywords": [],
                     "description": "A Basic Bitcoin to Fiat converter"
                 }
@@ -302,27 +324,19 @@
                     "summary": ""
                 },
                 {
-                    "id": "75b87dcb-56ef-498d-bd26-a7d646bec914",
-                    "url": "https://www.codecademy.com/learn/paths/software-engineering-for-data-scientists",
-                    "date": "",
-                    "name": "Software Engineering for Data Scientists",
-                    "issuer": "Codecademy (In Progress)",
-                    "summary": ""
+                    "id": "d032f173-ff3f-4e82-9a93-5c427a0decc0",
+                    "url": "https://www.istqb.org/certifications/certified-tester-foundation-level",
+                    "date": "2023-10-01",
+                    "name": "ISTQB® Foundation Level",
+                    "issuer": "ISTQB® - International Software Testing Qualifications Board",
+                    "summary": "Credential ID CTFL-126241 India"
                 },
                 {
-                    "id": "d1057a6c-c2b2-436f-9166-9e17ae591e71",
-                    "url": "https://www.codecademy.com/learn/paths/build-python-web-apps-with-django",
-                    "date": "",
-                    "name": "Build Python Web Apps with Django",
-                    "issuer": "Codecademy (In Progress)",
-                    "summary": ""
-                },
-                {
-                    "id": "44fc2443-b6fc-4c39-8e29-55884cb2b8d0",
-                    "url": "https://learn.microsoft.com/en-us/certifications/exams/ai-900/",
-                    "date": "",
-                    "name": "Microsoft Azure AI Fundamentals",
-                    "issuer": "Microsoft (In Progress)",
+                    "id": "25203b5b-b9c4-4adb-abad-0f72a20bda1d",
+                    "url": "https://www.hackerrank.com/certificates/dfa000422e2e",
+                    "date": "2023-05-01",
+                    "name": "Python (Basic) Certificate",
+                    "issuer": "HackerRank",
                     "summary": ""
                 }
             ],
@@ -391,7 +405,7 @@
                 }
             ],
             "columns": 4,
-            "visible": true
+            "visible": false
         },
         "b0921892-9a4c-40ff-9cc4-d189e3a31f2a": {
             "name": "Languages",
@@ -484,7 +498,7 @@
                     },
                     "level": "",
                     "title": "Frameworks",
-                    "summary": "- Django \n- Flutter\n- Hugo\n- Selenium\n- Flask",
+                    "summary": "\n- Flutter\n- Jmeter",
                     "keywords": [],
                     "levelNum": 0,
                     "subtitle": ""
@@ -498,7 +512,7 @@
                     },
                     "level": "",
                     "title": "Languages",
-                    "summary": "- Python\n- Bash\n- HTML/CSS\n- Dart\n- JavaScript\n- C & C++",
+                    "summary": "- Python\n- HTML/CSS\n- Dart\n- JavaScript",
                     "keywords": [],
                     "levelNum": 0,
                     "subtitle": ""
@@ -512,7 +526,7 @@
                     },
                     "level": "",
                     "title": "Tools",
-                    "summary": "- Jenkins\n- Firebase & MySQL\n- Git\n- Linode\n- Azure\n- Notion\n- FL Studio & Ableton",
+                    "summary": "- Jenkins\n- Firebase & MySQL\n- Git\n- FL Studio & Ableton",
                     "keywords": [],
                     "levelNum": 0,
                     "subtitle": ""
@@ -526,7 +540,7 @@
                     },
                     "level": "",
                     "title": "OS",
-                    "summary": "- Windows 10 & 11\n- Ubuntu V22\n- Arch Linux V6\n- Raspberry Pi OS\n- webOS OSE",
+                    "summary": "- Windows \n- Linux (Ubuntu)",
                     "keywords": [],
                     "levelNum": 0,
                     "subtitle": ""
@@ -558,7 +572,9 @@
                 ],
                 [
                     "publications",
-                    "volunteer"
+                    "volunteer",
+                    "skills",
+                    "references"
                 ]
             ],
             [
@@ -573,21 +589,14 @@
                     "interests",
                     "languages"
                 ]
-            ],
-            [
-                [],
-                [
-                    "skills",
-                    "references"
-                ]
             ]
         ],
         "locale": "en",
         "template": "onyx",
         "typography": {
             "size": {
-                "body": 13,
-                "heading": 31
+                "body": 12,
+                "heading": 25
             },
             "family": {
                 "body": "Open Sans",
