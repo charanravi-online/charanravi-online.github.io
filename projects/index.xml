@@ -11,6 +11,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://charanravi-online.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Consume</title>
+      <link>https://charanravi-online.github.io/projects/consume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://charanravi-online.github.io/projects/consume/</guid>
+      <description>⚠️ WARNING When consume.py is run, a complex calculation is performed which utilises around 2TB of system RAM. Some of the basic operations are temporarily down since the demand for RAM would be so high. Any normal user in their right mind would not have over 2TB of RAM installed, so use this with caution. Although not harmful, it may cause some damage to the system and I take no reponsibility for it.</description>
+    </item>
+    
+    <item>
       <title>Sats Converter</title>
       <link>https://charanravi-online.github.io/projects/satsconverter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
