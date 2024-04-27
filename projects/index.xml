@@ -32,13 +32,14 @@ This is only one of the sites under The Bitcoin Association of Hong Kong</descri
     </item>
     
     <item>
-      <title>Terminal-Wiki</title>
+      <title>Wiki</title>
       <link>https://charanravi-online.github.io/projects/terminalwiki/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://charanravi-online.github.io/projects/terminalwiki/</guid>
-      <description>Abstract The Terminal-Wiki project on GitHub is a command-line tool for accessing and searching Wikipedia articles directly from the terminal. The project allows users to retrieve summary information on a topic or query, as well as access full articles in a text-based format.
-The project is written in Python and uses the Wikipedia API to retrieve and process data. It also utilizes the Pygments library to add syntax highlighting to the text output, making it easier to read and follow.</description>
+      <description>Wiki, a command-line tool to get Wikipedia summaries in your terminal wiki: A command-line tool for fetching Wikipedia summaries. Perfect for quick information access without leaving your terminal. Suitable for students, researchers, or the curious.
+Open Source: I&amp;rsquo;ve made this project open source, so explore, contribute, or modify the source code on GitHub.
+How to Use wiki: Install and run wiki &amp;ldquo;Topic&amp;rdquo; (use quotes for multi-word topics). Up to 10 suggestions will be displayed for selection, delivering a concise summary for your chosen topic.</description>
     </item>
     
   </channel>
