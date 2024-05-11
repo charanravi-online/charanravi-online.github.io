@@ -25,13 +25,13 @@ jobs:
           git remote add upstream https://github.com/charanravi-online/my-site.git || true
           git fetch upstream
 
-      - name: Checkout specific folders
+      - name: Checkout specific contents of the public folder
         run: |
-          git checkout upstream/main -- public/
-          # only the above mentioned files and folder are synced
+          git checkout upstream/main -- public/*
+          # This will sync only the contents inside the public folder
 
       - name: Commit changes
         run: |
           git add .
-          git commit -m "Sync public folder changes from my-site repository"
+          git commit -m "Sync public folder contents from my-site repository"
           git push origin main
