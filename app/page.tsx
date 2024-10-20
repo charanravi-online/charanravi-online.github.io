@@ -150,20 +150,30 @@ export default function Home() {
               </p>
               <div className="h-32 bg-black"></div> {/* Creates a 4rem (64px) spacer */}
 
-              <div className="flex space-x-8">
-                  <p className="text-white max-w-prose hover:underline whitespace-nowrap">
-                      <Link href="https://www.linkedin.com/in/r-charan/">LinkedIn</Link>
-                  </p>
-                  <p className="text-white max-w-prose hover:underline whitespace-nowrap">
-                      <Link href="https://instagram.com/charan.json">Instagram</Link>
-                  </p>
-                  <p className="text-white max-w-prose hover:underline whitespace-nowrap">
-                      <Link href="https://x.com/PyCharan">X (Formerly Twitter)</Link>
-                  </p>
-                  <p className="text-white max-w-prose hover:underline whitespace-nowrap">
-                      <Link href="https://github.com/charanravi-online">GitHub</Link>
-                  </p>
-              </div>
+              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8">
+    <p className="text-white max-w-prose hover:underline whitespace-nowrap">
+        <a href="https://www.linkedin.com/in/r-charan/" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+        </a>
+    </p>
+    <p className="text-white max-w-prose hover:underline whitespace-nowrap">
+        <a href="https://instagram.com/charan.json" target="_blank" rel="noopener noreferrer">
+            Instagram
+        </a>
+    </p>
+    <p className="text-white max-w-prose hover:underline whitespace-nowrap">
+        <a href="https://x.com/PyCharan" target="_blank" rel="noopener noreferrer">
+            X (Formerly Twitter)
+        </a>
+    </p>
+    <p className="text-white max-w-prose hover:underline whitespace-nowrap">
+        <a href="https://github.com/charanravi-online" target="_blank" rel="noopener noreferrer">
+            GitHub
+        </a>
+    </p>
+</div>
+
+
 
               <div className="h-32 bg-black"></div> {/* Creates a 4rem (64px) spacer */}
           </section>
