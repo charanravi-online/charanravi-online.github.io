@@ -107,7 +107,7 @@ export default function Home() {
           {/* Background Section */}
           <section id="background" className="flex flex-col items-center justify-center bg-black text-white p-16 gap-8">
               <h2 className="text-3xl mt-8 whitespace-nowrap">// BACKGROUND //</h2>
-              <div className="h-16 bg-black"></div> {/* Creates a 4rem (64px) spacer */}
+              <div className="h-16 bg-black whitespace-nowrap"></div> {/* Creates a 4rem (64px) spacer */}
               <p className="text-center max-w-prose bg-black text-yellow-500">LG Soft India</p>
               <p className="text-center max-w-prose">
                   I got the chance to work on several projects during my time at LG. Some of them include - webOS OSE, ATOM (a secret AI project I can't talk much about),
