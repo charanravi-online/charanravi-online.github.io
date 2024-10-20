@@ -82,20 +82,22 @@ export default function Home() {
               <div className="h-16 bg-black"></div> {/* Creates a 4rem (64px) spacer */}
 
               {/* Flex container for images */}
-<div className="flex flex-row items-start justify-center space-x-8">
+              <div className="flex flex-col items-center space-y-8">
     {/* First Image */}
     <img
         src="/wiki.png" // Adjust the path to your image
         alt="Description of image 1"
-        className="rounded-lg border border-gray-300 shadow-md w-1/3 h-auto" // Change the width as needed
+        className="rounded-lg border border-gray-300 shadow-md w-full sm:w-2/3 lg:w-1/3 h-auto" // Responsive widths
     />
     {/* Second Image */}
     <img
         src="/satsconverter.png" // Adjust the path to your image
         alt="Description of image 2"
-        className="rounded-lg border border-gray-300 shadow-md w-1/3 h-auto" // Change the width as needed
+        className="rounded-lg border border-gray-300 shadow-md w-full sm:w-2/3 lg:w-1/3 h-auto" // Responsive widths
     />
 </div>
+
+
 
           </section>
 
@@ -171,7 +173,7 @@ export default function Home() {
 
 
 
-              <div className="h-16 bg-black"></div> {/* Creates a 4rem (64px) spacer */}
+              <div className="h-2 bg-black"></div> {/* Creates a 4rem (64px) spacer */}
           </section>
       </div>
   );
