@@ -40,7 +40,7 @@ export default function Home() {
                       {/* Resume Button */}
                       <a
                           className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-12 px-5 min-w-[150px]"
-                          href="https://drive.google.com/file/d/1qmlp_ypbIk8U7yDO9IVv4pxb0emxf-b4/view?usp=sharing"
+                          href="/RCharan-Resume.pdf"
                           target="_blank"
                           rel="noopener noreferrer"
                       >
@@ -81,26 +81,22 @@ export default function Home() {
               <h2 className="text-3xl mt-8">// WORK //</h2>
               <div className="h-16 bg-black"></div> {/* Creates a 4rem (64px) spacer */}
 
-              {/* Flex container for iframes */}
-              <div className="flex flex-row items-start justify-center space-x-8">
-                  {/* Embed the iframes */}
-                  <iframe
-                      src="https://snapcraft.io/wiki/embedded?button=black"
-                      frameBorder="0"
-                      width="100%"
-                      height="400px"
-                      scrolling="no"
-                      style={{ border: '1px solid #CCC', borderRadius: '12px' }}
-                  ></iframe>
-                  {/* <iframe
-                      src="https://rates.bitcoin.org.hk/"
-                      frameBorder="0"
-                      width="100%"
-                      scrolling="no"
-                      height="400px"
-                      style={{ border: '1px solid #CCC', borderRadius: '12px' }}
-                  ></iframe> */}
-              </div>
+              {/* Flex container for images */}
+<div className="flex flex-row items-start justify-center space-x-8">
+    {/* First Image */}
+    <img
+        src="/wiki.png" // Adjust the path to your image
+        alt="Description of image 1"
+        className="rounded-lg border border-gray-300 shadow-md w-1/3 h-auto" // Change the width as needed
+    />
+    {/* Second Image */}
+    <img
+        src="/satsconverter.png" // Adjust the path to your image
+        alt="Description of image 2"
+        className="rounded-lg border border-gray-300 shadow-md w-1/3 h-auto" // Change the width as needed
+    />
+</div>
+
           </section>
 
           <div className="h-16 bg-red-700"></div> {/* Creates a 4rem (64px) spacer */}
