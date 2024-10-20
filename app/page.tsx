@@ -89,6 +89,7 @@ export default function Home() {
                       frameBorder="0"
                       width="100%"
                       height="400px"
+                      scrolling="no"
                       style={{ border: '1px solid #CCC', borderRadius: '12px' }}
                   ></iframe>
                   {/* <iframe
@@ -119,7 +120,7 @@ export default function Home() {
 
           {/* About Section */}
           <section id="about" className="flex flex-col items-center justify-center bg-red-700 text-white p-16 gap-8">
-              <h2 className="text-3xl mt-8">// ABOUT //</h2>
+              <h2 className="text-3xl mt-8 whitespace-nowrap">// ABOUT //</h2>
               <div className="h-16 bg-red-700"></div> {/* Creates a 4rem (64px) spacer */}
               <p className="text-center max-w-prose">
                   I'm a Software Developer, currently based in India, with 3 years of experience across brand and product, at companies large and small.
@@ -139,7 +140,7 @@ export default function Home() {
 
           {/* Contact Section */}
           <section id="contact" className="flex flex-col items-center justify-center bg-black text-white p-16 gap-8">
-              <h2 className="text-3xl mt-8">// CONTACT //</h2>
+              <h2 className="text-3xl mt-8 whitespace-nowrap">// CONTACT //</h2>
               <div className="h-16 bg-black"></div> {/* Creates a 4rem (64px) spacer */}
 
               {/* Flex container for email and LinkedIn links */}
@@ -150,16 +151,16 @@ export default function Home() {
               <div className="h-32 bg-black"></div> {/* Creates a 4rem (64px) spacer */}
 
               <div className="flex space-x-8">
-                  <p className="text-white max-w-prose hover:underline">
+                  <p className="text-white max-w-prose hover:underline whitespace-nowrap">
                       <Link href="https://www.linkedin.com/in/r-charan/">LinkedIn</Link>
                   </p>
-                  <p className="text-white max-w-prose hover:underline">
+                  <p className="text-white max-w-prose hover:underline whitespace-nowrap">
                       <Link href="https://instagram.com/charan.json">Instagram</Link>
                   </p>
-                  <p className="text-white max-w-prose hover:underline">
+                  <p className="text-white max-w-prose hover:underline whitespace-nowrap">
                       <Link href="https://x.com/PyCharan">X (Formerly Twitter)</Link>
                   </p>
-                  <p className="text-white max-w-prose hover:underline">
+                  <p className="text-white max-w-prose hover:underline whitespace-nowrap">
                       <Link href="https://github.com/charanravi-online">GitHub</Link>
                   </p>
               </div>
