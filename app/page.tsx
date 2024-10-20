@@ -40,7 +40,7 @@ export default function Home() {
                       {/* Resume Button */}
                       <a
                           className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-12 px-5 min-w-[150px]"
-                          href="https://drive.proton.me/urls/KV1GSD7S0W#5Bt4QooR9TJP"
+                          href="https://drive.google.com/file/d/1qmlp_ypbIk8U7yDO9IVv4pxb0emxf-b4/view?usp=sharing"
                           target="_blank"
                           rel="noopener noreferrer"
                       >
@@ -108,7 +108,7 @@ export default function Home() {
           {/* Background Section */}
           <section id="background" className="flex flex-col items-center justify-center bg-black text-white p-16 gap-8">
               <h2 className="text-3xl mt-8 whitespace-nowrap">// BACKGROUND //</h2>
-              <div className="h-16 bg-black whitespace-nowrap"></div> {/* Creates a 4rem (64px) spacer */}
+              <div className="h-8 bg-black whitespace-nowrap"></div> {/* Creates a 4rem (64px) spacer */}
               <p className="text-center max-w-prose bg-black text-yellow-500">LG Soft India</p>
               <p className="text-center max-w-prose">
                   I got the chance to work on several projects during my time at LG. Some of them include - webOS OSE, ATOM (a secret AI project I can't talk much about),
@@ -121,7 +121,7 @@ export default function Home() {
           {/* About Section */}
           <section id="about" className="flex flex-col items-center justify-center bg-red-700 text-white p-16 gap-8">
               <h2 className="text-3xl mt-8 whitespace-nowrap">// ABOUT //</h2>
-              <div className="h-16 bg-red-700"></div> {/* Creates a 4rem (64px) spacer */}
+              <div className="h-8 bg-red-700"></div> {/* Creates a 4rem (64px) spacer */}
               <p className="text-center max-w-prose">
                   I'm a Software Developer, currently based in India, with 3 years of experience across brand and product, at companies large and small.
               </p>
@@ -141,7 +141,7 @@ export default function Home() {
           {/* Contact Section */}
           <section id="contact" className="flex flex-col items-center justify-center bg-black text-white p-16 gap-8">
               <h2 className="text-3xl mt-8 whitespace-nowrap">// CONTACT //</h2>
-              <div className="h-16 bg-black"></div> {/* Creates a 4rem (64px) spacer */}
+              <div className="h-8 bg-black"></div> {/* Creates a 4rem (64px) spacer */}
 
               {/* Flex container for email and LinkedIn links */}
               <p className="text-yellow-500 max-w-prose">charanravi.online@gmail.com</p>
@@ -175,7 +175,7 @@ export default function Home() {
 
 
 
-              <div className="h-32 bg-black"></div> {/* Creates a 4rem (64px) spacer */}
+              <div className="h-16 bg-black"></div> {/* Creates a 4rem (64px) spacer */}
           </section>
       </div>
   );
