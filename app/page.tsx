@@ -40,25 +40,25 @@ export default function Home() {
     {/* Centered Navigation */}
     <div className="absolute top-0 left-0 right-0 flex justify-center space-x-4 py-4">
       <a
-        href="#work"
+        href="/work"
         className={`text-sm text-black ${activeSection === "work" ? "font-bold" : ""}`}
       >
         Work
       </a>
       <a
-        href="#background"
+        href="/background"
         className={`text-sm text-black ${activeSection === "background" ? "font-bold" : ""}`}
       >
         Background
       </a>
       <a
-        href="#about"
+        href="/about"
         className={`text-sm text-black ${activeSection === "about" ? "font-bold" : ""}`}
       >
         About
       </a>
       <a
-        href="#contact"
+        href="/contact"
         className={`text-sm text-black ${activeSection === "contact" ? "font-bold" : ""}`}
       >
         Contact
@@ -86,10 +86,7 @@ export default function Home() {
 <button
   className="border rounded-full py-2 px-4 hover:bg-gray-200 w-32 text-center"
   onClick={() => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
+    window.location.href = '/contact'; 
   }}
 >
   Contact
