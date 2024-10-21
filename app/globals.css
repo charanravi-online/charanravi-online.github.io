@@ -51,4 +51,41 @@ body {
     background-clip: text;
     text-fill-color: transparent;
   }
+
+  .paper-background {
+    background-color: #FAFAF9; /* Base color */
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 0.05), transparent 10%),
+        radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.05), transparent 10%),
+        radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.05), transparent 10%);
+    background-size: 10% 10%; /* Adjust this for more or less noise */
+    background-repeat: no-repeat;
+  }
+}
+
+/* Fixed Sidebar Styles */
+.fixed-sidebar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 150px; /* Width of the sidebar */
+  z-index: 10; /* Ensure it stays above other elements */
+}
+
+.fixed-sidebar a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #171717; /* Default text color */
+  transition: background-color 0.3s;
+}
+
+.fixed-sidebar a.active {
+  background-color: #6a5acd; /* Highlight color */
+  color: #ffffff; /* Change text color on active */
+}
+
+.fixed-sidebar a:hover {
+  background-color: rgba(106, 90, 205, 0.2); /* Hover effect */
 }

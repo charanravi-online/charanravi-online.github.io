@@ -1,181 +1,197 @@
 "use client";
 import { Source_Code_Pro } from "@next/font/google";
-import Image from "next/image"; // Importing image for using with your gallery
-import Link from 'next/link';
+import { useEffect, useState } from "react";
 
 const sourceCodePro = Source_Code_Pro({
   weight: ["400", "700"],
   subsets: ["latin"],
 });
+
 export default function Home() {
+  const [activeSection, setActiveSection] = useState("");
+
+  const handleScroll = () => {
+    const sections = document.querySelectorAll("section");
+    let scrollPosition = window.scrollY;
+
+    sections.forEach((section) => {
+      const sectionTop = (section as HTMLElement).offsetTop;
+      const sectionHeight = (section as HTMLElement).clientHeight;
+
+      if (
+        scrollPosition >= sectionTop - 50 &&
+        scrollPosition < sectionTop + sectionHeight
+      ) {
+        setActiveSection((section as HTMLElement).getAttribute("id") || ""); // Added fallback to prevent null
+      }
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-      <div className={`min-h-screen animated-bg ${sourceCodePro.className}`}>
-          {/* Hero Section */}
-          <section className={`flex flex-col items-center justify-center bg-black text-white h-screen p-8 pb-20 gap-16 sm:p-20`}>
-              {/* Top Right Menu */}
-              <nav className="absolute top-8 right-8">
-                  <ul className="flex gap-4">
-                      <li>
-                          <a href="#work" className="text-sm sm:text-base text-white hover:underline">Work</a>
-                      </li>
-                      <li>
-                          <a href="#background" className="text-sm sm:text-base text-white hover:underline">Background</a>
-                      </li>
-                      <li>
-                          <a href="#about" className="text-sm sm:text-base text-white hover:underline">About</a>
-                      </li>
-                      <li>
-                          <a href="#contact" className="text-sm sm:text-base text-white hover:underline">Contact</a>
-                      </li>
-                  </ul>
-              </nav>
-
-              <main className="flex flex-col gap-8 items-center">
-                  <div className="flex flex-col items-center justify-center">
-                      <h1 className="text-custom-large mt-8 gradient-text">Charan Ravi</h1>
-                      <p className="text-sm mt-6">Software Development Engineer</p>
-                  </div>
-
-                  <div className="flex gap-4 items-center flex-col sm:flex-row">
-                      {/* Resume Button */}
-                      <a
-                          className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-12 px-5 min-w-[150px]"
-                          href="/RCharan-Resume.pdf"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                      >
-                          Resume
-                      </a>
-
-                      {/* Contact Button */}
-                      <a
-                          className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-12 px-5 min-w-[150px]"
-                          onClick={() => {
-                              const contactSection = document.getElementById("contact");
-                              if (contactSection) {
-                                  contactSection.scrollIntoView({ behavior: "smooth" });
-                              }
-                          }}
-                      >
-                          Contact
-                      </a>
-                  </div>
-              </main>
-
-              {/* Scroll Down Indicator */}
-              <div
-                  className="absolute bottom-10 animate-bounce cursor-pointer"
-                  onClick={() => {
-                      const section = document.getElementById("work");
-                      if (section) {
-                          section.scrollIntoView({ behavior: "smooth" });
-                      }
-                  }}
-              >
-                  <span>&darr;</span>
-              </div>
-          </section>
-
-          {/* Work Section */}
-          <section id="work" className="flex flex-col items-center justify-center bg-red-700 text-white p-16 gap-8">
-              <h2 className="text-3xl mt-8">// WORK //</h2>
-              <div className="h-16 bg-black"></div> {/* Creates a 4rem (64px) spacer */}
-
-              {/* Flex container for images */}
-              <div className="flex flex-col items-center space-y-8">
-    {/* First Image */}
-    <img
-        src="/wiki.png" // Adjust the path to your image
-        alt="Description of image 1"
-        className="rounded-lg border border-gray-300 shadow-md w-full sm:w-2/3 lg:w-1/3 h-auto" // Responsive widths
-    />
-    {/* Second Image */}
-    <img
-        src="/satsconverter.png" // Adjust the path to your image
-        alt="Description of image 2"
-        className="rounded-lg border border-gray-300 shadow-md w-full sm:w-2/3 lg:w-1/3 h-auto" // Responsive widths
-    />
-</div>
-
-
-
-          </section>
-
-          <div className="h-16 bg-red-700"></div> {/* Creates a 4rem (64px) spacer */}
-
-          {/* Background Section */}
-          <section id="background" className="flex flex-col items-center justify-center bg-black text-white p-16 gap-8">
-              <h2 className="text-3xl mt-8 whitespace-nowrap">// BACKGROUND //</h2>
-              <div className="h-8 bg-black whitespace-nowrap"></div> {/* Creates a 4rem (64px) spacer */}
-              <p className="text-center max-w-prose bg-black text-yellow-500">LG Soft India</p>
-              <p className="text-center max-w-prose">
-                  I got the chance to work on several projects during my time at LG. Some of them include - webOS OSE, ATOM (a secret AI project I can't talk much about),
-                  and the prestigious H&A (Home Appliance & Air Solution) Division, where I got to work with firmwares for a lot of the products that LG has engineered.
-              </p>
-          </section>
-
-          <div className="h-64 bg-black"></div> {/* Creates a 4rem (64px) spacer */}
-
-          {/* About Section */}
-          <section id="about" className="flex flex-col items-center justify-center bg-red-700 text-white p-16 gap-8">
-              <h2 className="text-3xl mt-8 whitespace-nowrap">// ABOUT //</h2>
-              <div className="h-8 bg-red-700"></div> {/* Creates a 4rem (64px) spacer */}
-              <p className="text-center max-w-prose">
-                  I'm a Software Developer, currently based in India, with 3 years of experience across brand and product, at companies large and small.
-              </p>
-              <p className="text-center max-w-prose">
-                  I take pride in my craft, and love mentoring earlier career developers. I develop cross-functional partnerships and thrive in complex, ambiguous environments.
-              </p>
-              <p className="text-center max-w-prose">
-                  I believe in keeping things minimal and effective.
-              </p>
-              <p className="text-center max-w-prose">
-                  Oh, I also compose music when I'm not coding something.
-              </p>
-          </section>
-
-          <div className="h-64 bg-red-700"></div> {/* Creates a 4rem (64px) spacer */}
-
-          {/* Contact Section */}
-          <section id="contact" className="flex flex-col items-center justify-center bg-black text-white p-16 gap-8">
-              <h2 className="text-3xl mt-8 whitespace-nowrap">// CONTACT //</h2>
-              <div className="h-8 bg-black"></div> {/* Creates a 4rem (64px) spacer */}
-
-              {/* Flex container for email and LinkedIn links */}
-              <p className="text-yellow-500 max-w-prose">charanravi.online@gmail.com</p>
-              <p className="text-center">
-                  <span className="text-white">I'm currently looking for a new role :)</span>
-              </p>
-              <div className="h-32 bg-black"></div> {/* Creates a 4rem (64px) spacer */}
-
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8">
-    <p className="text-white max-w-prose hover:underline whitespace-nowrap">
-        <a href="https://www.linkedin.com/in/r-charan/" target="_blank" rel="noopener noreferrer">
-            LinkedIn
+    <div className={`min-h-screen ${sourceCodePro.className} bg-[#f8f8f5]`}>
+      {/* Fixed Sidebar */}
+      <div className="fixed left-0 top-1/4 transform -translate-y-1/2 space-y-2">
+        <a
+          href="#work"
+          className={`text-sm ${activeSection === "work" ? "font-bold" : ""}`}
+        >
+          Work
         </a>
-    </p>
-    <p className="text-white max-w-prose hover:underline whitespace-nowrap">
-        <a href="https://instagram.com/charan.json" target="_blank" rel="noopener noreferrer">
-            Instagram
+        <a
+          href="#background"
+          className={`text-sm ${
+            activeSection === "background" ? "font-bold" : ""
+          }`}
+        >
+          Background
         </a>
-    </p>
-    <p className="text-white max-w-prose hover:underline whitespace-nowrap">
-        <a href="https://x.com/PyCharan" target="_blank" rel="noopener noreferrer">
-            X (Formerly Twitter)
+        <a
+          href="#about"
+          className={`text-sm ${activeSection === "about" ? "font-bold" : ""}`}
+        >
+          About
         </a>
-    </p>
-    <p className="text-white max-w-prose hover:underline whitespace-nowrap">
-        <a href="https://github.com/charanravi-online" target="_blank" rel="noopener noreferrer">
-            GitHub
+        <a
+          href="#contact"
+          className={`text-sm ${
+            activeSection === "contact" ? "font-bold" : ""
+          }`}
+        >
+          Contact
         </a>
-    </p>
-</div>
-
-
-
-              <div className="h-2 bg-black"></div> {/* Creates a 4rem (64px) spacer */}
-          </section>
       </div>
+
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center h-screen p-8 text-black">
+        <h1 className="text-4xl font-bold">Charan Ravi</h1>
+        <p className="text-sm mt-4">Software Development Engineer</p>
+
+        <div className="flex gap-4 mt-8">
+          {/* Resume Button */}
+          <a
+            className="border rounded-full py-2 px-4 bg-black text-white hover:bg-gray-700"
+            href="/RCharan-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume
+          </a>
+
+          {/* Contact Button */}
+          <button
+            className="border rounded-full py-2 px-4 hover:bg-gray-200"
+            onClick={() => {
+              const contactSection = document.getElementById("contact");
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
+            Contact
+          </button>
+        </div>
+
+        {/* Scroll Down Indicator */}
+        <div
+          className="absolute bottom-10 cursor-pointer animate-bounce"
+          onClick={() => {
+            const section = document.getElementById("work");
+            if (section) {
+              section.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+        >
+          <span>&darr;</span>
+        </div>
+      </section>
+
+      {/* Work Section */}
+      <section id="work" className="p-16 text-center">
+        <h2 className="text-2xl font-bold">// WORK //</h2>
+
+        <div className="mt-8 space-y-8">
+          <img
+            src="/wiki.png"
+            alt="Project 1"
+            className="rounded-lg border border-gray-300 shadow-md w-full sm:w-1/2"
+          />
+          <img
+            src="/satsconverter.png"
+            alt="Project 2"
+            className="rounded-lg border border-gray-300 shadow-md w-full sm:w-1/2"
+          />
+        </div>
+      </section>
+
+      {/* Background Section */}
+      <section id="background" className="p-16 text-center">
+        <h2 className="text-2xl font-bold">// BACKGROUND //</h2>
+        <p className="mt-4 max-w-prose mx-auto">
+          During my time at LG Soft India, I worked on various projects,
+          including webOS OSE and the H&A Division. I contributed to firmware
+          development for LG products and worked on AI-driven solutions.
+        </p>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="p-16 text-center">
+        <h2 className="text-2xl font-bold">// ABOUT //</h2>
+        <p className="mt-4 max-w-prose mx-auto">
+          I'm a Software Developer with 3 years of experience, currently based
+          in India. I focus on creating minimal and effective solutions, while
+          also mentoring others and composing music.
+        </p>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="p-16 text-center">
+        <h2 className="text-2xl font-bold">// CONTACT //</h2>
+        <p className="mt-4">charanravi.online@gmail.com</p>
+        <p>Looking for new opportunities.</p>
+
+        <div className="flex justify-center space-x-4 mt-8">
+          <a
+            href="https://www.linkedin.com/in/r-charan/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://instagram.com/charan.json"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            Instagram
+          </a>
+          <a
+            href="https://x.com/PyCharan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            X (Formerly Twitter)
+          </a>
+          <a
+            href="https://github.com/charanravi-online"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            GitHub
+          </a>
+        </div>
+      </section>
+    </div>
   );
 }
-
