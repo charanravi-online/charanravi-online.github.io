@@ -63,6 +63,13 @@ body {
   }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+
+.quote {
+  font-family: 'Covered By Your Grace', cursive; /* Use cursive as a fallback */
+  font-size: 24px; /* Adjust as needed */
+  text-align: center; /* Center the text */
+}
 /* Fixed Sidebar Styles */
 .fixed-sidebar {
   position: fixed;
