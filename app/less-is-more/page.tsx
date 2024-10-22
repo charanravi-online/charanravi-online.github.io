@@ -39,36 +39,6 @@ export default function Home() {
 
   return (
     <div className={`min-h-screen ${sourceCodePro.className} bg-[#f7f4e1]`}>
-      {/* Centered Navigation */}
-    <div className="absolute top-0 left-0 right-0 flex justify-center space-x-4 py-4">
-      <a
-        href="/work"
-        className={`text-sm text-black ${activeSection === "work" ? "font-bold" : ""}`}
-      >
-        Work
-      </a>
-      <a
-        href="/background"
-        className={`text-sm text-black ${activeSection === "background" ? "font-bold" : ""}`}
-      >
-        Background
-      </a>
-      <a
-        href="/about"
-        className={`text-sm text-black ${activeSection === "about" ? "font-bold" : ""}`}
-      >
-        About
-      </a>
-      <a
-        href="/contact"
-        className={`text-sm text-black ${activeSection === "contact" ? "font-bold" : ""}`}
-      >
-        Contact
-      </a>
-    </div>
-    <br />
-        <br />
-
       {/* Home Tab at the Top Left */}
       <nav className="fixed top-0 left-0 p-4">
         <Link href="/">
@@ -81,13 +51,12 @@ export default function Home() {
 
       {/* About Section */}
       <section id="about" className="p-16 text-center">
-        <h2 className="text-2xl font-bold text-black">// ABOUT //</h2>
+        <h2 className="text-2xl font-bold text-black">less is more.</h2>
         <br />
         <br />
         <p className="mt-4 max-w-prose mx-auto text-black">
-          I'm a Software Developer with 3 years of experience, currently based
-          in India. I focus on creating minimal and effective solutions, while
-          also mentoring others and composing music.
+          weee woo weee wooo<br />
+          oooo what's this new page?
         </p>
       </section>
     </div>

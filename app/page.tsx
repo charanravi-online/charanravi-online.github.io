@@ -36,7 +36,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={`min-h-screen ${sourceCodePro.className} bg-[#f8f8f5]`}>
+    <div className={`min-h-screen ${sourceCodePro.className} bg-[#f7f4e1]`}>
     {/* Centered Navigation */}
     <div className="absolute top-0 left-0 right-0 flex justify-center space-x-4 py-4">
       <a
@@ -84,19 +84,24 @@ export default function Home() {
 
 {/* Contact Button */}
 <button
-  className="border rounded-full py-2 px-4 hover:bg-gray-200 w-32 text-center"
+  className="border border-black rounded-full py-2 px-4 hover:bg-gray-200 w-32 text-center"
   onClick={() => {
-    window.location.href = '/contact'; 
+    window.location.href = '/contact';
   }}
 >
   Contact
 </button>
 
+
         </div>
 
 {/* Quote Indicator */}
 <div className="absolute bottom-10 text-center cursor-pointer">
-  <p className={`text-[7px] ${sourceCodePro.className}`}>
+  <p className={`text-[9px] ${sourceCodePro.className}`}
+  onClick={() => {
+    window.location.href = '/less-is-more'; 
+  }}>
+    
     “Less is more”
   </p>
 </div>

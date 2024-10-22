@@ -1,6 +1,8 @@
 "use client";
 import { Source_Code_Pro } from "@next/font/google";
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { AiOutlineHome } from "react-icons/ai";
 
 const sourceCodePro = Source_Code_Pro({
   weight: ["400", "700"],
@@ -22,7 +24,7 @@ export default function Home() {
         scrollPosition >= sectionTop - 50 &&
         scrollPosition < sectionTop + sectionHeight
       ) {
-        setActiveSection((section as HTMLElement).getAttribute("id") || ""); // Added fallback to prevent null
+        setActiveSection((section as HTMLElement).getAttribute("id") || "");
       }
     });
   };
@@ -36,30 +38,45 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={`min-h-screen ${sourceCodePro.className} bg-[#f8f8f5]`}>
-
-      {/* Background Section */}
-      {/* <section id="background" className="p-16 text-center">
-        <h2 className="text-2xl font-bold text-black">// BACKGROUND //</h2>
+    <div className={`min-h-screen ${sourceCodePro.className} bg-[#f7f4e1]`}>
+            {/* Centered Navigation */}
+    <div className="absolute top-0 left-0 right-0 flex justify-center space-x-4 py-4">
+      <a
+        href="/work"
+        className={`text-sm text-black ${activeSection === "work" ? "font-bold" : ""}`}
+      >
+        Work
+      </a>
+      <a
+        href="/background"
+        className={`text-sm text-black ${activeSection === "background" ? "font-bold" : ""}`}
+      >
+        Background
+      </a>
+      <a
+        href="/about"
+        className={`text-sm text-black ${activeSection === "about" ? "font-bold" : ""}`}
+      >
+        About
+      </a>
+      <a
+        href="/contact"
+        className={`text-sm text-black ${activeSection === "contact" ? "font-bold" : ""}`}
+      >
+        Contact
+      </a>
+    </div>
+    <br />
         <br />
-        <p className="text-xl text-black">LG Soft India</p>
-        <p className="mt-4 max-w-prose mx-auto text-black">
-          
-          During my time at LG Soft India, I worked on various projects,
-          including webOS OSE and the H&A Division. I contributed to firmware
-          development for LG products and worked on AI-driven solutions.
-        </p>
-      </section> */}
-
-      {/* About Section */}
-      {/* <section id="about" className="p-16 text-center">
-        <h2 className="text-2xl font-bold text-black">// ABOUT // </h2>
-        <p className="mt-4 max-w-prose mx-auto text-black">
-          I'm a Software Developer with 3 years of experience, currently based
-          in India. I focus on creating minimal and effective solutions, while
-          also mentoring others and composing music.
-        </p>
-      </section> */}
+      {/* Home Tab at the Top Left */}
+      <nav className="fixed top-0 left-0 p-4">
+        <Link href="/">
+          <div className="flex items-center text-black cursor-pointer">
+            <AiOutlineHome size={24} /> {/* Home Icon */}
+            <span className="ml-2"></span> {/* Home Text */}
+          </div>
+        </Link>
+      </nav>
 
       {/* Contact Section */}
       <section id="contact" className="p-16 text-center text-black">
@@ -68,12 +85,14 @@ export default function Home() {
         <br />
         <p className="mt-4">charanravi.online@gmail.com</p>
         <br />
-        <p>Looking for new opportunities :)</p>
+        <p className="text-sm">[Currently exploring new opportunities. <br /> grab my resume from the <a href="/" className="underline hover:underline" rel="noopener noreferrer" >home</a> page]</p>
         <br />
         <br />
         <br />
         <br />
-        <div className="flex justify-center space-x-4 mt-8">
+
+        {/* Social Links */}
+        <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
           <a
             href="https://www.linkedin.com/in/r-charan/"
             target="_blank"
@@ -91,12 +110,12 @@ export default function Home() {
             Instagram
           </a>
           <a
-            href="https://x.com/PyCharan"
+            href="https://x.com/charanjson"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline"
           >
-            X (Formerly Twitter)
+            X (Twitter)
           </a>
           <a
             href="https://github.com/charanravi-online"
