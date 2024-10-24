@@ -79,7 +79,22 @@ export default function Home() {
       </nav>
 
       {/* Background Section */}
-      <section id="background" className="p-16 text-center">
+      <section id="about" className="p-16">
+  <div className="max-w-prose mx-auto">
+    <h2 className="text-2xl font-bold text-black text-center">// BACKGROUND //</h2>
+    <br />
+    <p className="text-xl text-black text-center">LG Soft India</p>
+    <br />
+    <p className="mt-4 text-left text-black">
+    During my time at LG Soft India, I worked on various projects,
+          including webOS OSE and the H&A Division. I contributed to firmware
+          development for LG products and worked on AI-driven solutions.
+    </p>
+  </div>
+</section>
+
+
+      {/* <section id="background" className="p-16 text-center">
         <h2 className="text-2xl font-bold text-black">// BACKGROUND //</h2>
         <br />
         <br />
@@ -92,7 +107,7 @@ export default function Home() {
           including webOS OSE and the H&A Division. I contributed to firmware
           development for LG products and worked on AI-driven solutions.
         </p>
-      </section>
+      </section> */}
 
       {/* About Section */}
       {/* <section id="about" className="p-16 text-center">

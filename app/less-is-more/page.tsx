@@ -50,15 +50,31 @@ export default function Home() {
       </nav>
 
       {/* About Section */}
-      <section id="about" className="p-16 text-center">
-        <h2 className="text-2xl font-bold text-black">less is more.</h2>
-        <br />
-        <br />
-        <p className="mt-4 max-w-prose mx-auto text-black">
-          weee woo weee wooo<br />
-          oooo what's this new page?
-        </p>
-      </section>
+      <section id="about" className="p-16 text-left">
+  <h2 className="text-2xl font-bold text-black text-center">some thoughts...</h2>
+  <br />
+  <br />
+  {/* <p className="mt-4 max-w-prose mx-auto text-center text-black">
+    Some thoughts...<br />
+    
+  </p> */}
+  
+  <ul className="mt-6 list-none text-center ">
+    <li className="mt-2">
+      <a href="/less-is-more/less-is-more" className="text-blue-800 text-center hover:underline">Less is More</a>
+    </li>
+    <li className="mt-2">
+      <a href="/less-is-more/coding-without-passion" className="text-blue-800 text-center hover:underline">coding without passion?</a>
+    </li>
+    {/* <li className="mt-2">
+      <a href="/philosophy-3" className="text-blue-800 hover:underline">Philosophy 3</a>
+    </li>
+    <li className="mt-2">
+      <a href="/philosophy-4" className="text-blue-800 hover:underline">Philosophy 4</a>
+    </li> */}
+  </ul>
+</section>
+
     </div>
   );
 }

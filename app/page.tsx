@@ -102,7 +102,7 @@ export default function Home() {
     window.location.href = '/less-is-more'; 
   }}>
     
-    “Less is more”
+    “Less is More”
   </p>
 </div>
 

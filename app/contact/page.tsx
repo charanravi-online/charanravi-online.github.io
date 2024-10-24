@@ -79,7 +79,27 @@ export default function Home() {
       </nav>
 
       {/* Contact Section */}
-      <section id="contact" className="p-16 text-center text-black">
+      <section id="about" className="p-16">
+  <div className="max-w-prose mx-auto">
+    <h2 className="text-2xl font-bold text-black text-center">// CONTACT //</h2>
+    <br />
+    <br />
+    <p className="mt-4 text-left text-black text-center">
+    [Currently exploring new opportunities.]
+    </p>
+    <br />
+    <br />
+    <p className="mt-4 text-center text-black">charanravi.online@gmail.com</p>
+    <br />
+    
+  </div>
+{/* </section> */}
+
+
+
+
+
+      {/* <section id="contact" className="p-16 text-center text-black">
         <h2 className="text-2xl font-bold">// CONTACT //</h2>
         <br />
         <br />
@@ -89,10 +109,12 @@ export default function Home() {
         <br />
         <br />
         <br />
-        <br />
+        <br /> */}
+
+
 
         {/* Social Links */}
-        <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
+        <div className="flex flex-col sm:flex-row text-black justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
           <a
             href="https://www.linkedin.com/in/r-charan/"
             target="_blank"
