@@ -43,31 +43,31 @@ export default function Home() {
     <div className="absolute top-0 left-0 right-0 flex justify-center space-x-4 py-4">
     <a
         href="/"
-        className={`text-sm text-black ${activeSection === "home" ? "font-bold" : ""}`}
+        className={`text-sm text-black hover:underline ${activeSection === "home" ? "font-bold" : ""}`}
       >
         Home
       </a>
       <a
         href="/work"
-        className={`text-sm text-black ${activeSection === "work" ? "font-bold" : ""}`}
+        className={`text-sm text-black hover:underline ${activeSection === "work" ? "font-bold" : ""}`}
       >
         Work
       </a>
       <a
         href="/background"
-        className={`text-sm text-black ${activeSection === "background" ? "font-bold" : ""}`}
+        className={`text-sm text-black underline hover:underline ${activeSection === "background" ? "font-bold" : ""}`}
       >
         Background
       </a>
       <a
         href="/about"
-        className={`text-sm text-black ${activeSection === "about" ? "font-bold" : ""}`}
+        className={`text-sm text-black hover:underline ${activeSection === "about" ? "font-bold" : ""}`}
       >
         About
       </a>
       <a
         href="/contact"
-        className={`text-sm text-black ${activeSection === "contact" ? "font-bold" : ""}`}
+        className={`text-sm text-black hover:underline ${activeSection === "contact" ? "font-bold" : ""}`}
       >
         Contact
       </a>

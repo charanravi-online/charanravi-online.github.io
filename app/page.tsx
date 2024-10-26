@@ -96,10 +96,10 @@
 
         {/* Centered Navigation */}
         <div className="absolute top-0 left-0 right-0 flex justify-center space-x-4 py-4">
-          <a href="/work" className={`text-sm text-black ${activeSection === "work" ? "font-bold" : ""}`}>Work</a>
-          <a href="/background" className={`text-sm text-black ${activeSection === "background" ? "font-bold" : ""}`}>Background</a>
-          <a href="/about" className={`text-sm text-black ${activeSection === "about" ? "font-bold" : ""}`}>About</a>
-          <a href="/contact" className={`text-sm text-black ${activeSection === "contact" ? "font-bold" : ""}`}>Contact</a>
+          <a href="/work" className={`text-sm text-black hover:underline ${activeSection === "work" ? "font-bold" : ""}`}>Work</a>
+          <a href="/background" className={`text-sm text-black hover:underline ${activeSection === "background" ? "font-bold" : ""}`}>Background</a>
+          <a href="/about" className={`text-sm text-black hover:underline ${activeSection === "about" ? "font-bold" : ""}`}>About</a>
+          <a href="/contact" className={`text-sm text-black hover:underline ${activeSection === "contact" ? "font-bold" : ""}`}>Contact</a>
         </div>
 
         {/* Hero Section */}
