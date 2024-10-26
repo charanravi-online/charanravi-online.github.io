@@ -59,12 +59,12 @@ export default function Home() {
       >
         Background
       </a>
-      {/* <a
+      <a
         href="/about"
         className={`text-sm text-black ${activeSection === "about" ? "font-bold" : ""}`}
       >
         About
-      </a> */}
+      </a>
       <a
         href="/contact"
         className={`text-sm text-black ${activeSection === "contact" ? "font-bold" : ""}`}

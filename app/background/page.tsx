@@ -53,12 +53,12 @@ export default function Home() {
       >
         Work
       </a>
-      {/* <a
+      <a
         href="/background"
         className={`text-sm text-black ${activeSection === "background" ? "font-bold" : ""}`}
       >
         Background
-      </a> */}
+      </a>
       <a
         href="/about"
         className={`text-sm text-black ${activeSection === "about" ? "font-bold" : ""}`}

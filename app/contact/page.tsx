@@ -65,12 +65,12 @@ export default function Home() {
       >
         About
       </a>
-      {/* <a
+      <a
         href="/contact"
         className={`text-sm text-black ${activeSection === "contact" ? "font-bold" : ""}`}
       >
         Contact
-      </a> */}
+      </a>
     </div>
     <br />
         <br />
