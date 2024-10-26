@@ -61,7 +61,7 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center h-screen p-8 text-black pt-24"> {/* Added padding-top */}
+      <section className="flex flex-col items-center justify-center h-screen p-8 text-black pt-4"> {/* Added padding-top */}
         <h1 className="text-4xl font-bold">Charan Ravi</h1>
         <p className="text-sm mt-4">{titles[currentTitleIndex]}</p> {/* Carousel effect for titles */}
 
