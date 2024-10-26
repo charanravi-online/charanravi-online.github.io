@@ -23,6 +23,7 @@
     "CREATE.",
     "CREATE.",
     "CREATE.",
+    "CREATE.",
   ];
 
 
@@ -61,12 +62,12 @@
     useEffect(() => {
       const splashInterval = setInterval(() => {
         setCurrentSplashIndex((prevIndex) => (prevIndex + 1) % splashTexts.length);
-      }, 300); // Change text every 400ms
+      }, 200); // Change text every 400ms
 
       const splashTimeout = setTimeout(() => {
         setShowSplash(false);
         clearInterval(splashInterval);
-      }, 4000); // Show splash for 4 seconds
+      }, 3000); // Show splash for 4 seconds
 
       return () => {
         clearTimeout(splashTimeout);
