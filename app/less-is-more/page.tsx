@@ -9,8 +9,17 @@ const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
 });
 
+const splashTexts = [
+  "LESS",
+  "LESS IS",
+  "LESS IS MORE",
+  "LESS IS MORE.",
+];
+
 export default function Home() {
   const [activeSection, setActiveSection] = useState("");
+  const [showSplash, setShowSplash] = useState(true);
+  const [currentSplashIndex, setCurrentSplashIndex] = useState(0);
 
   const handleScroll = () => {
     const sections = document.querySelectorAll("section");
@@ -29,6 +38,23 @@ export default function Home() {
     });
   };
 
+  // Splash screen effect
+  useEffect(() => {
+    const splashInterval = setInterval(() => {
+      setCurrentSplashIndex((prevIndex) => (prevIndex + 1) % splashTexts.length);
+    }, 1000); // Change text every second
+
+    const splashTimeout = setTimeout(() => {
+      setShowSplash(false);
+      clearInterval(splashInterval);
+    }, 4000); // Show splash for 4 seconds
+
+    return () => {
+      clearTimeout(splashTimeout);
+      clearInterval(splashInterval);
+    };
+  }, []);
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -39,42 +65,38 @@ export default function Home() {
 
   return (
     <div className={`min-h-screen ${sourceCodePro.className} bg-[#f7f4e1]`}>
+      {/* Splash Screen */}
+      {showSplash && (
+        <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black text-[#f7f4e1] text-3xl">
+          {splashTexts[currentSplashIndex]}
+        </div>
+      )}
+
       {/* Home Tab at the Top Left */}
-      <nav className="fixed top-0 left-0 p-4">
-        <Link href="/">
-          <div className="flex items-center text-black cursor-pointer">
-            <AiOutlineHome size={24} /> {/* Home Icon */}
-            <span className="ml-2"></span> {/* Home Text */}
-          </div>
-        </Link>
-      </nav>
+      {!showSplash && (
+        <nav className="fixed top-0 left-0 p-4">
+          <Link href="/">
+            <div className="flex items-center text-black cursor-pointer">
+              <AiOutlineHome size={24} /> {/* Home Icon */}
+              <span className="ml-2"></span> {/* Home Text */}
+            </div>
+          </Link>
+        </nav>
+      )}
 
       {/* About Section */}
       <section id="about" className="p-16 text-left">
-  <h2 className="text-2xl font-bold text-black text-center">some thoughts...</h2>
-  <br />
-  <br />
-  {/* <p className="mt-4 max-w-prose mx-auto text-center text-black">
-    Some thoughts...<br />
-    
-  </p> */}
-  
-  <ul className="mt-6 list-none text-center ">
-    <li className="mt-2">
-      <a href="/less-is-more/less-is-more" className="text-blue-800 text-center hover:underline">Less is More</a>
-    </li>
-    <li className="mt-2">
-      <a href="/less-is-more/coding-without-passion" className="text-blue-800 text-center hover:underline">coding without passion?</a>
-    </li>
-    {/* <li className="mt-2">
-      <a href="/philosophy-3" className="text-blue-800 hover:underline">Philosophy 3</a>
-    </li>
-    <li className="mt-2">
-      <a href="/philosophy-4" className="text-blue-800 hover:underline">Philosophy 4</a>
-    </li> */}
-  </ul>
-</section>
-
+        <h2 className="text-2xl font-bold text-black text-center">Some Thoughts...</h2>
+        <br />
+        <ul className="mt-6 list-none text-center ">
+          <li className="mt-2">
+            <a href="/less-is-more/less-is-more" className="text-blue-800 text-center hover:underline">Less is More</a>
+          </li>
+          <li className="mt-2">
+            <a href="/less-is-more/coding-without-passion" className="text-blue-800 text-center hover:underline">Coding Without Passion?</a>
+          </li>
+        </ul>
+      </section>
     </div>
   );
 }

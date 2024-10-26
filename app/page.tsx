@@ -9,7 +9,6 @@ const sourceCodePro = Source_Code_Pro({
 
 // Texts for both splash screen and main page
 const splashTexts = [
-  "CREATE.",
   "DESIGN.",
   "INNOVATE.",
   "EXPLORE.",
@@ -17,7 +16,13 @@ const splashTexts = [
   "DREAM.",
   "INSPIRE.",
   "EVOLVE.",
-  "SHARE."
+  "SHARE.",
+  "COMPOSE.",
+  "ENVISION.",
+  "CODE.",
+  "CREATE.",
+  "CREATE.",
+  "CREATE.",
 ];
 
 
