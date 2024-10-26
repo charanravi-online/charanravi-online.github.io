@@ -30,9 +30,7 @@
     "Software Development Engineer",
     "Open Source Contributor",
     "Tech Enthusiast",
-    "Music Composer",
-    "Minimalist",
-    "Part-Time Yogi",
+    
   ];
 
   export default function Home() {
