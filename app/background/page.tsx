@@ -41,18 +41,24 @@ export default function Home() {
     <div className={`min-h-screen ${sourceCodePro.className} bg-[#f7f4e1]`}>
             {/* Centered Navigation */}
     <div className="absolute top-0 left-0 right-0 flex justify-center space-x-4 py-4">
+    <a
+        href="/"
+        className={`text-sm text-black ${activeSection === "home" ? "font-bold" : ""}`}
+      >
+        Home
+      </a>
       <a
         href="/work"
         className={`text-sm text-black ${activeSection === "work" ? "font-bold" : ""}`}
       >
         Work
       </a>
-      <a
+      {/* <a
         href="/background"
         className={`text-sm text-black ${activeSection === "background" ? "font-bold" : ""}`}
       >
         Background
-      </a>
+      </a> */}
       <a
         href="/about"
         className={`text-sm text-black ${activeSection === "about" ? "font-bold" : ""}`}
@@ -68,15 +74,7 @@ export default function Home() {
     </div>
     <br />
         <br />
-      {/* Home Tab at the Top Left */}
-      <nav className="fixed top-0 left-0 p-4">
-        <Link href="/">
-          <div className="flex items-center text-black cursor-pointer">
-            <AiOutlineHome size={24} /> {/* Home Icon */}
-            <span className="ml-2"></span> {/* Home Text */}
-          </div>
-        </Link>
-      </nav>
+      
 
       {/* Background Section */}
       <section id="about" className="p-16">

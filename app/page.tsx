@@ -7,6 +7,20 @@ const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
 });
 
+// Texts for both splash screen and main page
+const splashTexts = [
+  "CREATE.",
+  "DESIGN.",
+  "INNOVATE.",
+  "EXPLORE.",
+  "LEARN.",
+  "DREAM.",
+  "INSPIRE.",
+  "EVOLVE.",
+  "SHARE."
+];
+
+
 const titles = [
   "Software Development Engineer",
   "Open Source Contributor",
@@ -19,7 +33,10 @@ const titles = [
 export default function Home() {
   const [activeSection, setActiveSection] = useState("");
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [showSplash, setShowSplash] = useState(true);
+  const [currentSplashIndex, setCurrentSplashIndex] = useState(0);
 
+  // Handle scroll event
   const handleScroll = () => {
     const sections = document.querySelectorAll("section");
     let scrollPosition = window.scrollY;
@@ -37,11 +54,24 @@ export default function Home() {
     });
   };
 
+  // Show splash screen for 4 seconds
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const splashInterval = setInterval(() => {
+      setCurrentSplashIndex((prevIndex) => (prevIndex + 1) % splashTexts.length);
+    }, 300); // Change text every 400ms
+
+    const splashTimeout = setTimeout(() => {
+      setShowSplash(false);
+      clearInterval(splashInterval);
+    }, 4000); // Show splash for 4 seconds
+
+    return () => {
+      clearTimeout(splashTimeout);
+      clearInterval(splashInterval);
+    };
   }, []);
 
+  // Title carousel effect
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
@@ -52,6 +82,13 @@ export default function Home() {
 
   return (
     <div className={`min-h-screen ${sourceCodePro.className} bg-[#f7f4e1]`}>
+      {/* Splash Screen */}
+      {showSplash && (
+        <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black text-[#f7f4e1] text-3xl">
+          {splashTexts[currentSplashIndex]}
+        </div>
+      )}
+
       {/* Centered Navigation */}
       <div className="absolute top-0 left-0 right-0 flex justify-center space-x-4 py-4">
         <a href="/work" className={`text-sm text-black ${activeSection === "work" ? "font-bold" : ""}`}>Work</a>
