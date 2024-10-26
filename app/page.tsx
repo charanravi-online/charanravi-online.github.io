@@ -29,8 +29,8 @@
 
   const titles = [
     "Software Development Engineer",
-    "Open Source Contributor",
-    "Tech Enthusiast",
+    "Software Development Engineer",
+    "Software Development Engineer",
     
   ];
 
