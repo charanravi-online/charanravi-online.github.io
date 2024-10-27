@@ -153,7 +153,7 @@ export default function Home() {
       <style jsx>{`
         .bg-gif {
         // credits: https://dribbble.com/shots/3169743--XPC2016-Final-entry
-          background-image: url('/future.gif');
+          background-image: url('/future_compressed.gif');
           background-size: cover;
           background-position: center;
         }
