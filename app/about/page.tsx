@@ -84,9 +84,12 @@ export default function Home() {
     <br />
     <br />
     <p className="mt-4 text-left text-black">
-      I'm a Software Developer with 3 years of experience, currently based
-      in India. I focus on creating minimal and effective solutions, while
-      also mentoring others and composing music.
+    I’m a software developer based in India with over 3 years of experience across brand and product, 
+    at companies large and small.
+    I take pride in my craft, and love mentoring earlier career developers. 
+    I develop cross functional partnerships, and thrive in complex, ambiguous environments.
+    <br /> 
+    I'm also a Music Composer with over 5,00,000 streams worldwide.
     </p>
   </div>
 </section>

@@ -81,12 +81,15 @@ export default function Home() {
   <div className="max-w-prose mx-auto">
     <h2 className="text-2xl font-bold text-black text-center">// BACKGROUND //</h2>
     <br />
-    <p className="text-xl text-black text-center">LG Soft India</p>
+
     <br />
-    <p className="mt-4 text-left text-black">
-    During my time at LG Soft India, I worked on various projects,
-          including webOS OSE and the H&A Division. I contributed to firmware
-          development for LG products and worked on AI-driven solutions.
+    <p className="text-xl text-black text-center">LG Soft India</p>
+    <p className="text-black text-sm text-center">Software Development Engineer in Test</p>
+    <br />
+    <p className="mt-4 text-left text-black">   
+    I led a team to build an automation framework to test the LG AI Models,
+    worked on the Open Source Edition of webOS (webOS OSE), and I am currently working 
+    on firmware updates under the Home Applicances & Air Solution dept.
     </p>
   </div>
 </section>
