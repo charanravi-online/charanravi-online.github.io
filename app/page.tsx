@@ -142,10 +142,10 @@ export default function Home() {
               <Image
                 src="/charan-ravi.jpg" // Path to your image
                 alt="Charan Ravi"
-                width={200} // Adjust width as needed
-                height={200} // Adjust height as needed
+                width={150} // Adjust width as needed
+                height={150} // Adjust height as needed
                 className="mb-4" // Add class for circular shape
-                style={{  borderRadius: '100px', backgroundColor: '#575050' }}
+                style={{  borderRadius: '90px', backgroundColor: '#575050' }}
               />
               <h1
                 className="text-5xl md:text-7xl lg:text-9xl font-bold cursor-pointer leading-tight text-center"
