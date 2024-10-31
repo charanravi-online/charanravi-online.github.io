@@ -138,14 +138,14 @@ export default function Home() {
 
           <section className="flex flex-col items-center justify-center h-screen p-4 md:p-8 pt-4 md:pt-8">
             {/* Add your image here */}
-            <div className="relative flex flex-col items-center mb-4">
+            <div className="relative flex flex-col items-center mb-2">
               <Image
                 src="/charan-ravi.jpg" // Path to your image
                 alt="Charan Ravi"
-                width={150} // Adjust width as needed
-                height={150} // Adjust height as needed
+                width={200} // Adjust width as needed
+                height={200} // Adjust height as needed
                 className="mb-4" // Add class for circular shape
-                style={{  borderRadius: '90px', backgroundColor: '#575050' }}
+                style={{  borderRadius: '100px', backgroundColor: '#575050' }}
               />
               <h1
                 className="text-5xl md:text-7xl lg:text-9xl font-bold cursor-pointer leading-tight text-center"
