@@ -118,37 +118,41 @@ export default function Home() {
         <a href="/contact" className={`text-sm hover:underline ${activeSection === "contact" ? "font-bold" : ""}`}>Contact</a>
       </div>
 
-      <section className="flex flex-col items-center justify-center h-screen p-8 pt-4">
-        <h1 className="text-4xl font-bold cursor-pointer" onClick={handleNameClick}>Charan Ravi</h1>
-        <p className="text-sm mt-4">{titles[currentTitleIndex]}</p>
+      <section className="flex flex-col items-center justify-center h-screen p-4 md:p-8 pt-4">
+  <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold cursor-pointer leading-tight text-center" onClick={handleNameClick}>
+    Charan Ravi
+  </h1>
 
-        <div className="flex gap-4 mt-8">
-          <a
-            className="border rounded-full py-2 px-4 bg-black text-white hover:bg-gray-700 inline-block w-32 text-center"
-            href="/RCharan-Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Resume
-          </a>
+  <p className="text-lg md:text-xl mt-4 text-center">{titles[currentTitleIndex]}</p>
 
-          <button
-            className="border border-black rounded-full py-2 px-4 hover:bg-gray-200 w-32 text-center"
-            onClick={() => { window.location.href = '/contact'; }}
-          >
-            Contact
-          </button>
-        </div>
+  <div className="flex gap-4 mt-8">
+    <a
+      className="border rounded-full py-2 px-4 bg-black text-white hover:bg-gray-700 inline-block w-32 text-center"
+      href="/RCharan-Resume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Resume
+    </a>
 
-        <div className="absolute bottom-10 text-center cursor-pointer">
-          <p
-            className={`text-[9px] ${sourceCodePro.className}`}
-            onClick={() => { window.location.href = '/less-is-more'; }}
-          >
-            “Less is More”
-          </p>
-        </div>
-      </section>
+    <button
+      className="border border-black rounded-full py-2 px-4 hover:bg-gray-200 w-32 text-center"
+      onClick={() => { window.location.href = '/contact'; }}
+    >
+      Contact
+    </button>
+  </div>
+
+  <div className="absolute bottom-10 text-center cursor-pointer">
+    <p
+      className={`text-[9px] ${sourceCodePro.className}`}
+      onClick={() => { window.location.href = '/less-is-more'; }}
+    >
+      “Less is More”
+    </p>
+  </div>
+</section>
+
 
       <style jsx>{`
         .bg-gif {

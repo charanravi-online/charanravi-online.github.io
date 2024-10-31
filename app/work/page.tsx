@@ -82,37 +82,44 @@ export default function Home() {
       {/* Work Section */}
       <section id="work" className="p-16 text-center text-black">
         <h2 className="text-2xl font-bold text-black">// WORK //</h2>
-        <br />
-        <br />
-        <br />
+        {/* <br /> */}
+        {/* <br /> */}
 
         
-        <h3 className="text-xl font-bold text-black">
-        <a 
-          href="https://snapcraft.io/wiki" // Replace with your actual link
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline hover:underline"
-        >
-          wiki
-        </a>
-        
-      </h3>
-      <p>a command-line tool to get Wikipedia summaries in your terminal</p>
-        <br />
-        <br />
-
-        <h3 className="text-xl font-bold text-black">
-    <a 
-      href="https://rates.bitcoin.org.hk/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="underline hover:underline"
+        {/* Action Cards */}
+<div className="flex flex-col items-center mt-4">
+  {/* Card 1 */}
+  <div className="bg-[#f7dc39] p-4 rounded-lg shadow-lg text-center max-w-md w-full mt-4 h-64 flex flex-col justify-between">
+    <h3 className="text-sm text-gray-500">WINDOWS/LINUX</h3>
+    <p className="text-2xl font-semibold">Wiki</p>
+    <p className="text-sm mt-2 text-gray-600">
+      A CMD-Line application that fetches quick, easy-to-read Wikipedia summaries.
+    </p>
+    <button 
+      className="mt-4 w-full bg-black text-white py-2 rounded-md hover:bg-gray-800"
+      onClick={() => window.open('https://snapcraft.io/wiki', '_blank')} // Open in a new tab
     >
-      sats converter
-    </a>
-  </h3>
-  <p>A Basic Bitcoin to Fiat converter with price feeds from Coindesk.</p>
+      Install
+    </button>
+  </div>
+
+  {/* Card 2 */}
+  <div className="bg-[#f7dc39] p-4 rounded-lg shadow-lg text-center max-w-md w-full mt-4 h-64 flex flex-col justify-between">
+    <h2 className="text-sm text-gray-500">WEBSITE</h2>
+    <p className="text-2xl font-semibold">BTC Converter</p>
+    <p className="text-sm mt-2 text-gray-600">
+      A Basic Bitcoin to Fiat converter with price feeds from Coindesk. <br />
+    </p>
+    <button 
+      className="mt-4 w-full bg-black text-white py-2 rounded-md hover:bg-gray-800"
+      onClick={() => window.open('https://rates.bitcoin.org.hk/', '_blank')} // Open in a new tab
+    >
+      View
+    </button>
+  </div>
+</div>
+
+
         
         
       </section>
