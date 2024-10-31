@@ -1,6 +1,7 @@
 "use client";
 import { Source_Code_Pro } from "@next/font/google";
 import { useEffect, useState, useRef } from "react";
+import Image from "next/image"; // Import Image component
 
 const sourceCodePro = Source_Code_Pro({
   weight: ["400", "700"],
@@ -106,7 +107,8 @@ export default function Home() {
       setIsGifActive(false);
       return;
     }
-
+    
+    // track credits : https://youtu.be/C73DubnDRBk?si=MmXzocGOTCCD0IwG
     const audio = new Audio("/track.mp3");
     audioRef.current = audio;
     audio.play();
@@ -134,8 +136,17 @@ export default function Home() {
             <a href="/contact" className={`text-sm hover:underline ${activeSection === "contact" ? "font-bold" : ""}`}>Contact</a>
           </div>
 
-          <section className="flex flex-col items-center justify-center h-screen p-4 md:p-8 pt-4">
-            <div className="relative">
+          <section className="flex flex-col items-center justify-center h-screen p-4 md:p-8 pt-4 md:pt-8">
+            {/* Add your image here */}
+            <div className="relative flex flex-col items-center mb-4">
+              <Image
+                src="/charan-ravi.jpg" // Path to your image
+                alt="Charan Ravi"
+                width={150} // Adjust width as needed
+                height={150} // Adjust height as needed
+                className="rounded-full mb-4" // Add class for circular shape
+                style={{ backgroundColor: '#575050' }}
+              />
               <h1
                 className="text-5xl md:text-7xl lg:text-9xl font-bold cursor-pointer leading-tight text-center"
                 onMouseEnter={() => setTooltipVisible(true)} // Show tooltip on hover
