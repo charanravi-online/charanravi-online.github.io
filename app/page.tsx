@@ -144,8 +144,8 @@ export default function Home() {
                 alt="Charan Ravi"
                 width={150} // Adjust width as needed
                 height={150} // Adjust height as needed
-                className="rounded-full mb-4" // Add class for circular shape
-                style={{ backgroundColor: '#575050' }}
+                className="mb-4" // Add class for circular shape
+                style={{  borderRadius: '90px', backgroundColor: '#575050' }}
               />
               <h1
                 className="text-5xl md:text-7xl lg:text-9xl font-bold cursor-pointer leading-tight text-center"
