@@ -136,7 +136,7 @@ export default function Home() {
             <a href="/contact" className={`text-sm hover:underline ${activeSection === "contact" ? "font-bold" : ""}`}>Contact</a>
           </div>
 
-          <section className="flex -mt-8 flex-col items-center justify-center h-screen p-4 md:p-8 pt-4 md:pt-8">
+          <section className="flex flex-col items-center justify-center h-screen p-4 md:p-8 pt-4 md:pt-8">
             {/* Add your image here */}
             <div className="relative flex flex-col items-center mb-4">
               <Image
