@@ -95,6 +95,9 @@ export default function Home() {
           <li className="mt-2">
             <a href="/less-is-more/coding-without-passion" className="text-blue-800 text-center hover:underline">Coding Without Passion?</a>
           </li>
+          <li className="mt-2">
+            <a href="/less-is-more/purushartha-I" className="text-blue-800 text-center hover:underline">Purushartha I: Dharma</a>
+          </li>
         </ul>
       </section>
     </div>
