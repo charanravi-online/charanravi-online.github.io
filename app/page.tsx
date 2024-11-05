@@ -1,224 +1,418 @@
 "use client";
-import { Source_Code_Pro } from "@next/font/google";
 import { useEffect, useState, useRef } from "react";
-import Image from "next/image"; // Import Image component
+import { motion, AnimatePresence } from "framer-motion";
+import { Space_Grotesk } from "@next/font/google";
+import Image from "next/image";
 
-const sourceCodePro = Source_Code_Pro({
-  weight: ["400", "700"],
+const spaceGrotesk = Space_Grotesk({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
-// Existing splash texts and titles
-const splashTexts = [
-  "DESIGN.",
-  "INNOVATE.",
-  "EXPLORE.",
-  "LEARN.",
-  "DREAM.",
-  "INSPIRE.",
-  "EVOLVE.",
-  "SHARE.",
-  "COMPOSE.",
-  "ENVISION.",
-  "CODE.",
-  "CREATE.",
-  "CREATE.",
-  "CREATE.",
-  "CREATE.",
+const sections = [
+  { id: "intro", title: "Intro" },
+  { id: "work", title: "Work" },
+  { id: "background", title: "Background" },
+  { id: "about", title: "About" },
+  { id: "contact", title: "Contact" }
 ];
 
-const titles = [
-  "Software Development Engineer",
-  "Software Development Engineer",
-  "Software Development Engineer",
+const workProjects = [
+  {
+    title: "Wiki",
+    description: "A command-line tool to get Wikipedia summaries in your terminal",
+    tags: ["Python", "Snapcraft", "WinGet"],
+    link: "https://snapcraft.io/wiki"
+  },
+  {
+    title: "BTC Converter", 
+    description: "A simple tool to convert Bitcoin to Sats",
+    tags: ["Python", "JavaScript", "HTML", "CSS"],
+    link: "https://rates.bitcoin.org.hk/"
+  }
 ];
 
-// New Tooltip Messages for "Less is More"
-const lessIsMoreTooltips = [
-  "Don't click!",
-  "Seriously, don't!",
-  "Are you sure?",
-  "It's a trap!",
-  "Just don't!",
-  "Don't say I didn't warn ya.",
-  "Fine go ahead.",
-];
+type AudienceType = 'anyone' | 'recruiters' | 'engineers' | 'product-managers';
+
+const audienceContent = {
+  anyone: {
+    title: "For Anyone",
+    description: "I'm a developer who loves creating meaningful digital experiences. I write about technology, design, and the intersection of both.",
+    skills: ["Creative Coding", "Digital Design", "Technical Writing"]
+  },
+  recruiters: {
+    title: "Recruiters",
+    description: "I'm a software engineer with 3+ years of experience building scalable web applications. My expertise includes React, Node.js, and cloud technologies.",
+    skills: ["Frontend Development", "Backend Architecture", "Cloud Computing"]
+  },
+  engineers: {
+    title: "Engineers",
+    description: "I'm passionate about clean code, system design, and open source. Check out my technical deep-dives and coding projects.",
+    skills: ["System Design", "Code Architecture", "Open Source"]
+  },
+  'product-managers': {
+    title: "Product Managers",
+    description: "I bring technical expertise to product development, helping bridge the gap between business goals and technical implementation.",
+    skills: ["Technical Strategy", "Product Development", "Cross-functional Collaboration"]
+  }
+};
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState("");
-  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
-  const [showSplash, setShowSplash] = useState(true);
-  const [currentSplashIndex, setCurrentSplashIndex] = useState(0);
-  const [isGifActive, setIsGifActive] = useState(false);
-  const [tooltipVisible, setTooltipVisible] = useState(false); // Tooltip for name
-  const [lessIsMoreTooltipVisible, setLessIsMoreTooltipVisible] = useState(false); // Tooltip for Less is More
-  const [lessIsMoreTooltipIndex, setLessIsMoreTooltipIndex] = useState(0); // Current index for the tooltip messages
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [activeSection, setActiveSection] = useState("intro");
+  const [currentTime, setCurrentTime] = useState("");
+  const [selectedAudience, setSelectedAudience] = useState<AudienceType>("anyone");
+  const [isNameExpanded, setIsNameExpanded] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Handle scroll event
-  const handleScroll = () => {
-    const sections = document.querySelectorAll("section");
-    let scrollPosition = window.scrollY;
-
-    sections.forEach((section) => {
-      const sectionTop = (section as HTMLElement).offsetTop;
-      const sectionHeight = (section as HTMLElement).clientHeight;
-
-      if (
-        scrollPosition >= sectionTop - 50 &&
-        scrollPosition < sectionTop + sectionHeight
-      ) {
-        setActiveSection((section as HTMLElement).getAttribute("id") || "");
-      }
-    });
-  };
-
-  // Splash screen effect
   useEffect(() => {
-    const splashInterval = setInterval(() => {
-      setCurrentSplashIndex((prevIndex) => (prevIndex + 1) % splashTexts.length);
-    }, 200);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2500);
 
-    const splashTimeout = setTimeout(() => {
-      setShowSplash(false);
-      clearInterval(splashInterval);
-    }, 3000);
-
-    return () => {
-      clearTimeout(splashTimeout);
-      clearInterval(splashInterval);
+    const updateTime = () => {
+      const now = new Date();
+      setCurrentTime(now.toLocaleTimeString('en-US', { 
+        timeZone: 'Asia/Kolkata',
+        hour12: true,
+        hour: 'numeric',
+        minute: 'numeric'
+      }));
     };
-  }, []);
 
-  // Title carousel effect
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
-    }, 2000);
-
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
     return () => clearInterval(interval);
   }, []);
 
-  // Handle click on "Charan Ravi" to toggle GIF and audio playback
-  const handleNameClick = () => {
-    if (audioRef.current && !audioRef.current.paused) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-      setIsGifActive(false);
-      return;
-    }
-    
-    // track credits : https://youtu.be/C73DubnDRBk?si=MmXzocGOTCCD0IwG
-    const audio = new Audio("/track.mp3");
-    audioRef.current = audio;
-    audio.play();
-    setIsGifActive(true);
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      const scrollPosition = window.scrollY;
 
-    audio.addEventListener("ended", () => {
-      setIsGifActive(false);
-      audioRef.current = null;
-    });
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          setActiveSection(section.id);
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: 'smooth'
+      });
+      setIsMenuOpen(false);
+    }
   };
 
-  // Render the splash screen or main content
-  return (
-    <div className={`${sourceCodePro.className} ${isGifActive ? "bg-gif text-white" : "bg-[#f7f4e1] text-black"}`}>
-      {showSplash ? (
-        <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black text-[#f7f4e1] text-3xl">
-          {splashTexts[currentSplashIndex]}
-        </div>
-      ) : (
-        <>
-          <div className="absolute top-0 left-0 right-0 flex justify-center space-x-4 py-4">
-            <a href="/work" className={`text-sm hover:underline ${activeSection === "work" ? "font-bold" : ""}`}>Work</a>
-            <a href="/background" className={`text-sm hover:underline ${activeSection === "background" ? "font-bold" : ""}`}>Background</a>
-            <a href="/about" className={`text-sm hover:underline ${activeSection === "about" ? "font-bold" : ""}`}>About</a>
-            <a href="/contact" className={`text-sm hover:underline ${activeSection === "contact" ? "font-bold" : ""}`}>Contact</a>
-          </div>
+  const handleLogoClick = () => {
+    window.location.reload();
+  };
 
-          <section className="flex flex-col items-center justify-center h-screen p-4 md:p-8 pt-4 md:pt-8">
-            {/* Add your image here */}
-            <div className="relative flex flex-col items-center mb-2">
-              <Image
-                src="/charan-ravi.jpg" // Path to your image
-                alt="Charan Ravi"
-                width={150} // Adjust width as needed
-                height={150} // Adjust height as needed
-                className="mb-4" // Add class for circular shape
-                style={{  borderRadius: '90px', backgroundColor: '#575050' }}
-              />
-              <h1
-                className="text-5xl md:text-7xl lg:text-9xl font-bold cursor-pointer leading-tight text-center"
-                onMouseEnter={() => setTooltipVisible(true)} // Show tooltip on hover
-                onMouseLeave={() => setTooltipVisible(false)} // Hide tooltip on mouse leave
-                onClick={handleNameClick}
+  const remainingLetters = "haran Ravi".split("");
+
+  return (
+    <div className={`${spaceGrotesk.className} bg-black text-white`}>
+      <AnimatePresence mode="wait">
+        {loading ? (
+          <motion.div
+            key="loader"
+            className="h-screen w-screen flex items-center justify-center bg-black"
+            exit={{ opacity: 0, transition: { duration: 0.5 } }}
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-center"
+            >
+              <motion.h1 
+                className="text-[12vw] md:text-[8vw] font-medium leading-none"
+                animate={{
+                  opacity: [1, 0],
+                  y: [0, -20],
+                  transition: { duration: 0.5, delay: 1.5 }
+                }}
               >
                 Charan Ravi
-              </h1>
-              {tooltipVisible && (
-                <div className="absolute bottom-full mb-2 bg-black text-white text-sm py-1 px-2 rounded-md text-center">
-                  Click to play/stop music!
-                </div>
-              )}
-            </div>
-
-            <p className="text-lg md:text-xl mt-4 text-center">{titles[currentTitleIndex]}</p>
-
-            <div className="flex gap-4 mt-8">
-              <div className="relative inline-block">
-                <a
-                  className="border rounded-full py-2 px-4 bg-black text-white hover:bg-gray-700 inline-block w-32 text-center"
-                  href="/RCharan-Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Resume
-                </a>
-              </div>
-
-              <div className="relative inline-block">
-                <button
-                  className="border border-black rounded-full py-2 px-4 hover:bg-gray-200 w-32 text-center"
-                  onClick={() => { window.location.href = '/contact'; }}
-                >
-                  Contact
-                </button>
-              </div>
-            </div>
-
-            <div className="absolute bottom-10 text-center cursor-pointer">
-              <div className="relative inline-block">
-                <p
-                  className={`text-[9px] ${sourceCodePro.className}`}
-                  onClick={() => { window.location.href = '/less-is-more'; }}
-                  onMouseEnter={() => {
-                    setLessIsMoreTooltipVisible(true); // Show tooltip on hover
-                    // Update the tooltip index for cycling
-                    setLessIsMoreTooltipIndex((prevIndex) => (prevIndex + 1) % lessIsMoreTooltips.length);
-                  }}
-                  onMouseLeave={() => setLessIsMoreTooltipVisible(false)} // Hide tooltip on mouse leave
-                >
-                  “Less is More”
-                </p>
-                {lessIsMoreTooltipVisible && (
-                  <div className="absolute bottom-full mb-2 bg-black text-white text-sm py-1 px-2 rounded-md text-center whitespace-nowrap">
-                    {lessIsMoreTooltips[lessIsMoreTooltipIndex]} {/* Display the current tooltip message */}
+              </motion.h1>
+            </motion.div>
+          </motion.div>
+        ) : (
+          <motion.div
+            key="content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="relative"
+          >
+            {/* Logo */}
+            <motion.div 
+              className="fixed top-8 left-4 md:left-8 z-50 cursor-pointer"
+              onHoverStart={() => setIsNameExpanded(true)}
+              onHoverEnd={() => setIsNameExpanded(false)}
+              onClick={handleLogoClick}
+              whileTap={{ scale: 0.95 }}
+            >
+              <div className="relative text-xl font-medium flex">
+                <span>C</span>
+                {isNameExpanded && (
+                  <div className="flex">
+                    {remainingLetters.map((letter, index) => (
+                      <motion.span
+                        key={index}
+                        initial={{ opacity: 0, x: -5 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{
+                          duration: 0.1,
+                          delay: index * 0.02,
+                          ease: "easeOut"
+                        }}
+                      >
+                        {letter}
+                      </motion.span>
+                    ))}
                   </div>
                 )}
               </div>
-            </div>
-          </section>
-        </>
-      )}
+            </motion.div>
 
-      <style jsx>{`
-        .bg-gif {
-          // credits: https://dribbble.com/shots/3169743--XPC2016-Final-entry
-          background-image: url('/future_compressed.gif');
-          background-size: cover;
-          background-position: center;
-        }
-      `}</style>
+            {/* Mobile Menu Button */}
+            <button 
+              className="fixed top-8 right-4 z-50 md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <div className="space-y-2">
+                <span className={`block w-8 h-0.5 bg-white transition-transform ${isMenuOpen ? 'rotate-45 translate-y-2.5' : ''}`}></span>
+                <span className={`block w-8 h-0.5 bg-white transition-opacity ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+                <span className={`block w-8 h-0.5 bg-white transition-transform ${isMenuOpen ? '-rotate-45 -translate-y-2.5' : ''}`}></span>
+              </div>
+            </button>
+
+            {/* Mobile Menu */}
+            <AnimatePresence>
+              {isMenuOpen && (
+                <motion.div
+                  initial={{ opacity: 0, x: "100%" }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: "100%" }}
+                  className="fixed inset-0 bg-black z-40 md:hidden pt-24 px-8"
+                >
+                  {sections.map(({ id, title }) => (
+                    <div key={id} className="mb-6">
+                      <button
+                        onClick={() => scrollToSection(id)}
+                        className="text-2xl font-medium"
+                      >
+                        <span className={`${activeSection === id ? 'text-white' : 'text-gray-500'}`}>
+                          {title}
+                        </span>
+                      </button>
+                    </div>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            {/* Header */}
+            <header className="p-4 md:p-8 pt-24 md:pt-8">
+              <div className="hidden md:flex justify-end mb-6">
+                <div className="text-sm text-gray-400">
+                  Bangalore, India — {currentTime} IST
+                </div>
+              </div>
+              <div className="relative md:static flex gap-4 md:gap-8 justify-start md:justify-center text-sm mb-8 overflow-x-auto px-4 before:hidden md:before:block before:absolute before:right-0 before:top-0 before:bottom-0 before:w-12 before:bg-gradient-to-l before:from-black before:to-transparent before:z-10">
+                {(['anyone', 'recruiters', 'engineers', 'product-managers'] as AudienceType[]).map((audience) => (
+                  <button
+                    key={audience}
+                    onClick={() => setSelectedAudience(audience)}
+                    className={`transition-colors whitespace-nowrap ${
+                      selectedAudience === audience 
+                        ? 'text-[#ffffff] font-medium' 
+                        : 'text-gray-500 hover:text-gray-300'
+                    }`}
+                  >
+                    {audienceContent[audience].title}
+                  </button>
+                ))}
+              </div>
+            </header>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden md:block fixed left-8 top-1/2 -translate-y-1/2 z-40">
+              {sections.map(({ id, title }) => (
+                <div key={id} className="mb-4 text-left">
+                  <button
+                    onClick={() => scrollToSection(id)}
+                    className="group flex items-center gap-2 text-sm"
+                  >
+                    <span className={`transition-all duration-300 ${
+                      activeSection === id ? 'text-white' : 'text-gray-500'
+                    }`}>
+                      {title}
+                    </span>
+                  </button>
+                </div>
+              ))}
+            </nav>
+
+            {/* Main Content */}
+            <main>
+              <section id="intro" className="min-h-screen flex items-center justify-center px-4 md:px-24 -mt-16">
+                <motion.div
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                  className="text-center max-w-7xl mx-auto"
+                >
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={selectedAudience}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      <p className="text-3xl md:text-6xl text-white leading-tight mb-12">
+                        {audienceContent[selectedAudience].description}
+                      </p>
+                      <div className="flex gap-4 flex-wrap justify-center">
+                        {audienceContent[selectedAudience].skills.map((skill, index) => (
+                          <span key={index} className="text-sm text-gray-400">
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </motion.div>
+                  </AnimatePresence>
+                </motion.div>
+              </section>
+
+              {/* Work Section */}
+              <section id="work" className="min-h-screen px-4 md:px-24 py-16 md:py-32 md:ml-16">
+                <motion.div
+                  initial={{ y: 100, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                  className="max-w-5xl"
+                >
+                  <h2 className="text-4xl md:text-7xl font-medium mb-8">Selected Work</h2>
+                  <div className="grid gap-8 md:gap-16">
+                    {workProjects.map((project, index) => (
+                      <motion.div
+                        key={index}
+                        className="group"
+                        whileHover={{ y: -10 }}
+                      >
+                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="block p-4 md:p-8 border border-gray-800 rounded-lg hover:border-gray-600 transition-colors">
+                          <h3 className="text-xl md:text-2xl font-medium mb-4">{project.title}</h3>
+                          <p className="text-gray-400 mb-6">{project.description}</p>
+                          <div className="flex flex-wrap gap-4">
+                            {project.tags.map((tag, tagIndex) => (
+                              <span key={tagIndex} className="text-sm text-gray-500">{tag}</span>
+                            ))}
+                          </div>
+                        </a>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              </section>
+
+              {/* Background Section */}
+              <section id="background" className="min-h-screen px-4 md:px-24 py-16 md:py-32 md:ml-16">
+                <motion.div
+                  initial={{ y: 100, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                  className="max-w-5xl space-y-12"
+                >
+                  <div className="flex flex-col md:flex-row items-start gap-8">
+                    <div className="relative w-48 h-48 flex-shrink-0">
+                      <Image
+                        src="/LGE_Logo_Mono_White_RGB.png"
+                        alt="LG Electronics Logo"
+                        layout="fill"
+                        objectFit="contain"
+                      />
+                    </div>
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-medium">Software Engineer</h3>
+                      <p className="text-gray-400">
+                        At LG Electronics, I work on developing and maintaining web applications for internal tools and customer-facing platforms. 
+                        I specialize in frontend development using React and Next.js, while also contributing to backend services using Node.js.
+                      </p>
+                      <p className="text-gray-400">
+                        Key achievements include implementing responsive designs, optimizing performance, and collaborating with cross-functional teams 
+                        to deliver high-quality software solutions.
+                      </p>
+                      <div className="flex flex-wrap gap-3">
+                        <span className="text-sm text-gray-500">React</span>
+                        <span className="text-sm text-gray-500">Next.js</span>
+                        <span className="text-sm text-gray-500">Node.js</span>
+                        <span className="text-sm text-gray-500">TypeScript</span>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </section>
+
+              {/* About Section */}
+              <section id="about" className="min-h-screen px-4 md:px-24 py-16 md:py-32 md:ml-16">
+                <motion.div
+                  initial={{ y: 100, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                  className="max-w-5xl"
+                >
+                  <h2 className="text-4xl md:text-7xl font-medium mb-8">About</h2>
+                  {/* Add your about content here */}
+                </motion.div>
+              </section>
+
+              {/* Contact Section */}
+              <section id="contact" className="min-h-screen px-4 md:px-24 py-16 md:py-32 md:ml-16">
+                <motion.div
+                  initial={{ y: 100, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                  className="max-w-5xl"
+                >
+                  <h2 className="text-4xl md:text-7xl font-medium mb-8">Contact</h2>
+                  {/* Add your contact content here */}
+                </motion.div>
+              </section>
+            </main>
+
+            {/* Footer */}
+            <footer className="px-4 md:px-24 py-8 text-gray-400 md:ml-16">
+              <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                <span className="text-center md:text-left">© 2024 Charan Ravi. All rights reserved.</span>
+                <div className="flex gap-4 md:gap-8">
+                  <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+                  <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+              </div>
+            </footer>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
