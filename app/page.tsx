@@ -5,7 +5,7 @@ import { Space_Grotesk } from "@next/font/google";
 import Image from "next/image";
 
 const spaceGrotesk = Space_Grotesk({
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"], // Increased font weights
   subsets: ["latin"],
 });
 
@@ -37,23 +37,23 @@ type AudienceType = 'anyone' | 'recruiters' | 'engineers' | 'product-managers';
 const audienceContent = {
   anyone: {
     title: "For Anyone",
-    description: "I'm a developer who loves creating meaningful digital experiences. I write about technology, design, and the intersection of both.",
-    skills: ["Creative Coding", "Digital Design", "Technical Writing"]
+    description: "I'm a developer who loves creating meaningful digital experiences. I'm a sucker for tech, minimalism, and the intersection of both.",
+    skills: [""]
   },
   recruiters: {
     title: "Recruiters",
-    description: "I'm a software engineer with 3+ years of experience building scalable web applications. My expertise includes React, Node.js, and cloud technologies.",
-    skills: ["Frontend Development", "Backend Architecture", "Cloud Computing"]
+    description: "I'm a software dev with 3+ years of experience building software solutions. My expertise includes Python, JavaScript etc.",
+    skills: [<a href="/RCharan-Resume.pdf" download>Download Resume</a>]
   },
   engineers: {
     title: "Engineers",
-    description: "I'm passionate about clean code, system design, and open source. Check out my technical deep-dives and coding projects.",
-    skills: ["System Design", "Code Architecture", "Open Source"]
+    description: "I'm passionate about technology, innovation and open source. Check out my technical deep-dives and coding projects.",
+    skills: [<a href="/RCharan-Resume.pdf" download>Download Resume</a>]
   },
   'product-managers': {
     title: "Product Managers",
     description: "I bring technical expertise to product development, helping bridge the gap between business goals and technical implementation.",
-    skills: ["Technical Strategy", "Product Development", "Cross-functional Collaboration"]
+    skills: [<a href="/RCharan-Resume.pdf" download>Download Resume</a>]
   }
 };
 
@@ -124,7 +124,7 @@ export default function Home() {
   const remainingLetters = "haran Ravi".split("");
 
   return (
-    <div className={`${spaceGrotesk.className} bg-black text-white`}>
+    <div className={`${spaceGrotesk.className} bg-black text-[#fefeff]`}>
       <AnimatePresence mode="wait">
         {loading ? (
           <motion.div
@@ -166,26 +166,29 @@ export default function Home() {
               onClick={handleLogoClick}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="relative text-xl font-medium flex">
+              <div className="relative text-3xl font-medium flex">
                 <span>C</span>
-                {isNameExpanded && (
-                  <div className="flex">
-                    {remainingLetters.map((letter, index) => (
-                      <motion.span
-                        key={index}
-                        initial={{ opacity: 0, x: -5 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{
-                          duration: 0.1,
-                          delay: index * 0.02,
-                          ease: "easeOut"
-                        }}
-                      >
-                        {letter}
-                      </motion.span>
-                    ))}
-                  </div>
-                )}
+                <AnimatePresence>
+                  {isNameExpanded && (
+                    <div className="flex">
+                      {remainingLetters.map((letter, index) => (
+                        <motion.span
+                          key={index}
+                          initial={{ opacity: 0, x: -5 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: 5 }}
+                          transition={{
+                            duration: 0.1,
+                            delay: index * 0.02,
+                            ease: "easeOut"
+                          }}
+                        >
+                          {letter}
+                        </motion.span>
+                      ))}
+                    </div>
+                  )}
+                </AnimatePresence>
               </div>
             </motion.div>
 
@@ -195,9 +198,9 @@ export default function Home() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <div className="space-y-2">
-                <span className={`block w-8 h-0.5 bg-white transition-transform ${isMenuOpen ? 'rotate-45 translate-y-2.5' : ''}`}></span>
-                <span className={`block w-8 h-0.5 bg-white transition-opacity ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-                <span className={`block w-8 h-0.5 bg-white transition-transform ${isMenuOpen ? '-rotate-45 -translate-y-2.5' : ''}`}></span>
+                <span className={`block w-8 h-0.5 bg-[#fefeff] transition-transform ${isMenuOpen ? 'rotate-45 translate-y-2.5' : ''}`}></span>
+                <span className={`block w-8 h-0.5 bg-[#fefeff] transition-opacity ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+                <span className={`block w-8 h-0.5 bg-[#fefeff] transition-transform ${isMenuOpen ? '-rotate-45 -translate-y-2.5' : ''}`}></span>
               </div>
             </button>
 
@@ -216,7 +219,7 @@ export default function Home() {
                         onClick={() => scrollToSection(id)}
                         className="text-2xl font-medium"
                       >
-                        <span className={`${activeSection === id ? 'text-white' : 'text-gray-500'}`}>
+                        <span className={`${activeSection === id ? 'text-[#fefeff]' : 'text-[#969696]'}`}>
                           {title}
                         </span>
                       </button>
@@ -229,19 +232,19 @@ export default function Home() {
             {/* Header */}
             <header className="p-4 md:p-8 pt-24 md:pt-8">
               <div className="hidden md:flex justify-end mb-6">
-                <div className="text-sm text-gray-400">
+                <div className="text-sm text-[#969696]">
                   Bangalore, India — {currentTime} IST
                 </div>
               </div>
-              <div className="relative md:static flex gap-4 md:gap-8 justify-start md:justify-center text-sm mb-8 overflow-x-auto px-4 before:hidden md:before:block before:absolute before:right-0 before:top-0 before:bottom-0 before:w-12 before:bg-gradient-to-l before:from-black before:to-transparent before:z-10">
+              <div className="relative md:static flex gap-4 md:gap-8 justify-start md:justify-center text-sm mb-8 overflow-x-auto scrollbar-hide px-4">
                 {(['anyone', 'recruiters', 'engineers', 'product-managers'] as AudienceType[]).map((audience) => (
                   <button
                     key={audience}
                     onClick={() => setSelectedAudience(audience)}
                     className={`transition-colors whitespace-nowrap ${
                       selectedAudience === audience 
-                        ? 'text-[#ffffff] font-medium' 
-                        : 'text-gray-500 hover:text-gray-300'
+                        ? 'text-[#fefeff] font-medium' 
+                        : 'text-[#969696] hover:text-[#fefeff]'
                     }`}
                   >
                     {audienceContent[audience].title}
@@ -259,7 +262,7 @@ export default function Home() {
                     className="group flex items-center gap-2 text-sm"
                   >
                     <span className={`transition-all duration-300 ${
-                      activeSection === id ? 'text-white' : 'text-gray-500'
+                      activeSection === id ? 'text-[#fefeff]' : 'text-[#969696]'
                     }`}>
                       {title}
                     </span>
@@ -285,12 +288,12 @@ export default function Home() {
                       exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.5 }}
                     >
-                      <p className="text-3xl md:text-6xl text-white leading-tight mb-12">
+                      <p className="text-3xl md:text-6xl text-[#fefeff] leading-tight mb-12 max-w-3xl mx-auto">
                         {audienceContent[selectedAudience].description}
                       </p>
                       <div className="flex gap-4 flex-wrap justify-center">
                         {audienceContent[selectedAudience].skills.map((skill, index) => (
-                          <span key={index} className="text-sm text-gray-400">
+                          <span key={index} className="text-sm text-[#969696]">
                             {skill}
                           </span>
                         ))}
@@ -309,25 +312,29 @@ export default function Home() {
                   viewport={{ once: true }}
                   className="max-w-5xl"
                 >
-                  <h2 className="text-4xl md:text-7xl font-medium mb-8">Selected Work</h2>
-                  <div className="grid gap-8 md:gap-16">
-                    {workProjects.map((project, index) => (
-                      <motion.div
-                        key={index}
-                        className="group"
-                        whileHover={{ y: -10 }}
-                      >
-                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="block p-4 md:p-8 border border-gray-800 rounded-lg hover:border-gray-600 transition-colors">
-                          <h3 className="text-xl md:text-2xl font-medium mb-4">{project.title}</h3>
-                          <p className="text-gray-400 mb-6">{project.description}</p>
-                          <div className="flex flex-wrap gap-4">
-                            {project.tags.map((tag, tagIndex) => (
-                              <span key={tagIndex} className="text-sm text-gray-500">{tag}</span>
-                            ))}
-                          </div>
-                        </a>
-                      </motion.div>
-                    ))}
+                  <div className="grid md:grid-cols-3 gap-8">
+                    <div className="md:col-span-2 md:col-start-2">
+                      <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-2xl">Selected Work</h2>
+                      <div className="grid gap-8 md:gap-16 max-w-2xl">
+                        {workProjects.map((project, index) => (
+                          <motion.div
+                            key={index}
+                            className="group"
+                            whileHover={{ y: -10 }}
+                          >
+                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="block p-4 md:p-8 border border-[#969696] rounded-lg hover:border-[#969696] transition-colors">
+                              <h3 className="text-xl md:text-2xl font-medium mb-4">{project.title}</h3>
+                              <p className="text-sm text-[#fefeff] mb-6">{project.description}</p>
+                              <div className="flex flex-wrap gap-4">
+                                {project.tags.map((tag, tagIndex) => (
+                                  <span key={tagIndex} className="text-sm text-[#969696]">{tag}</span>
+                                ))}
+                              </div>
+                            </a>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </motion.div>
               </section>
@@ -339,37 +346,45 @@ export default function Home() {
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
-                  className="max-w-5xl space-y-12"
+                  className="max-w-5xl"
                 >
-                  <div className="flex flex-col md:flex-row items-start gap-8">
-                    <div className="relative w-48 h-48 flex-shrink-0">
-                      <Image
-                        src="/LGE_Logo_Mono_White_RGB.png"
-                        alt="LG Electronics Logo"
-                        layout="fill"
-                        objectFit="contain"
-                      />
-                    </div>
-                    <div className="space-y-4">
-                      <h3 className="text-2xl font-medium">Software Engineer</h3>
-                      <p className="text-gray-400">
-                        At LG Electronics, I work on developing and maintaining web applications for internal tools and customer-facing platforms. 
-                        I specialize in frontend development using React and Next.js, while also contributing to backend services using Node.js.
-                      </p>
-                      <p className="text-gray-400">
-                        Key achievements include implementing responsive designs, optimizing performance, and collaborating with cross-functional teams 
-                        to deliver high-quality software solutions.
-                      </p>
-                      <div className="flex flex-wrap gap-3">
-                        <span className="text-sm text-gray-500">React</span>
-                        <span className="text-sm text-gray-500">Next.js</span>
-                        <span className="text-sm text-gray-500">Node.js</span>
-                        <span className="text-sm text-gray-500">TypeScript</span>
+                  <div className="grid md:grid-cols-3 gap-8">
+                    <div className="md:col-span-2 md:col-start-2">
+                      <div className="relative w-48 h-48 flex-shrink-0 mb-8">
+                        <Image
+                          src="/LGE_Logo_Mono_White_RGB.png"
+                          alt="LG Electronics Logo"
+                          layout="fill"
+                          objectFit="contain"
+                        />
+                      </div>
+                      <div className="space-y-4 max-w-2xl">
+                        <h3 className="text-xl font-medium text-[#fefeff]">Software Development Engineer in Test</h3>
+                        <p className="text-sm text-[#fefeff]">
+                          I led a team to build an automation framework to test the LG AI Models, 
+                          worked on the Open Source Edition of webOS (webOS OSE), and I am currently working 
+                          on firmware updates under the Home Applicances & Air Solution dept.
+                        </p>
+                        <p className="text-sm text-[#fefeff]">
+                          Key achievements include implementing responsive designs, optimizing performance, and collaborating with cross-functional teams 
+                          to deliver high-quality software solutions.
+                        </p>
+                        <div className="flex flex-wrap gap-3">
+                          <span className="text-sm text-[#969696]">Python</span>
+                          <span className="text-sm text-[#969696]">JavaScript</span>
+                          <span className="text-sm text-[#969696]">Electron</span>
+                          <span className="text-sm text-[#969696]">Appium</span>
+                          <span className="text-sm text-[#969696]">Selenium</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </motion.div>
               </section>
+              <br />
+              <br />
+              <br />
+              <br />
 
               {/* About Section */}
               <section id="about" className="min-h-screen px-4 md:px-24 py-16 md:py-32 md:ml-16">
@@ -380,8 +395,51 @@ export default function Home() {
                   viewport={{ once: true }}
                   className="max-w-5xl"
                 >
-                  <h2 className="text-4xl md:text-7xl font-medium mb-8">About</h2>
-                  {/* Add your about content here */}
+                  <div className="grid md:grid-cols-3 gap-8">
+                    <div className="md:col-span-1 md:col-start-2">
+                      <div className="space-y-8">
+                        <p className="text-sm text-[#fefeff]">
+                          I'm a Software Developer with 3 years of experience, currently based
+                          in India. I focus on creating minimal and effective solutions, while
+                          also mentoring others and composing music.
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="md:col-span-1 md:col-start-3 md:mt-32">
+                      <div className="space-y-8">
+                        <p className="text-sm text-[#fefeff]">
+                          My approach combines technical expertise with creative problem-solving,
+                          always striving to build solutions that are both elegant and practical.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <br />
+                  <br />
+                  <br />
+                  
+                  <div className="grid md:grid-cols-3 gap-8">
+                    <div className="md:col-span-1 md:col-start-2">
+                      <div className="space-y-8">
+                        <p className="text-sm text-[#fefeff]">
+                          I'm a Software Developer with 3 years of experience, currently based
+                          in India. I focus on creating minimal and effective solutions, while
+                          also mentoring others and composing music.
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="md:col-span-1 md:col-start-3 md:mt-32">
+                      <div className="space-y-8">
+                        <p className="text-sm text-[#fefeff]">
+                          My approach combines technical expertise with creative problem-solving,
+                          always striving to build solutions that are both elegant and practical.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </motion.div>
               </section>
 
@@ -394,19 +452,73 @@ export default function Home() {
                   viewport={{ once: true }}
                   className="max-w-5xl"
                 >
-                  <h2 className="text-4xl md:text-7xl font-medium mb-8">Contact</h2>
-                  {/* Add your contact content here */}
+                  <div className="grid md:grid-cols-3 gap-8">
+                    <div className="md:col-span-2 md:col-start-2">
+                      <div className="space-y-8 max-w-2xl">
+                        <Image
+                          src="/charan-ravi.jpg"
+                          alt="Charan Ravi"
+                          width={500}
+                          height={300}
+                          className="mb-8"
+                        />
+                        <p className="text-xl md:text-xl text-[#fefeff] underline">charanravi.online@gmail.com</p>
+                        <div className="flex items-center gap-2">
+                          <div className="relative">
+                            <div className="w-2 h-2 bg-[#fefeff] rounded-full animate-pulse"></div>
+                            <div className="absolute top-0 left-0 w-2 h-2 bg-[#fefeff] rounded-full animate-[ping_1.5s_ease-in-out_infinite] opacity-90"></div>
+                          </div>
+                          <p className="text-l text-[#969696]">Looking for new opportunities.</p>
+                        </div>
+                        <div className="flex gap-8 pt-8">
+                          <a
+                            href="https://www.linkedin.com/in/r-charan/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm"
+                          >
+                            LinkedIn
+                          </a>
+                          <a
+                            href="https://github.com/charanravi-online"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm"
+                          >
+                            GitHub
+                          </a>
+                          <a
+                            href="https://x.com/charanjson"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm"
+                          >
+                            X [Twitter]
+                          </a>
+                          <a
+                            href="https://instagram.com/charan.json"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm"
+                          >
+                            Instagram
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </motion.div>
               </section>
             </main>
 
             {/* Footer */}
-            <footer className="px-4 md:px-24 py-8 text-gray-400 md:ml-16">
+            <footer className="px-4 md:px-24 py-8 text-[#969696] md:ml-16">
               <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                <span className="text-center md:text-left">© 2024 Charan Ravi. All rights reserved.</span>
+                <span className="text-sm text-center md:text-left">© 2024 Charan Ravi. All rights reserved.</span>
                 <div className="flex gap-4 md:gap-8">
-                  <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                  <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+                <span className="text-sm text-center md:text-left">Design & Code by - Charan Ravi</span>
+                  {/* <a className="text-sm text-[#969696] hover:text-[#fefeff] transition-colors">made with ❤️ by charan</a> */}
+                  {/* <a href="#" className="text-sm text-[#969696] hover:text-[#fefeff] transition-colors">Terms of Service</a> */}
                 </div>
               </div>
             </footer>
