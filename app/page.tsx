@@ -208,9 +208,10 @@ export default function Home() {
             <AnimatePresence>
               {isMenuOpen && (
                 <motion.div
-                  initial={{ opacity: 0, x: "100%" }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: "100%" }}
+                  initial={{ x: "100%" }}
+                  animate={{ x: 0 }}
+                  exit={{ x: "100%" }}
+                  transition={{ type: "tween", duration: 0.3 }}
                   className="fixed inset-0 bg-black z-40 md:hidden pt-24 px-8"
                 >
                   {sections.map(({ id, title }) => (
