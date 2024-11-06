@@ -119,8 +119,9 @@ export default function Home() {
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
+      const offset = sectionId === "intro" ? 0 : section.offsetTop;
       window.scrollTo({
-        top: section.offsetTop,
+        top: offset,
         behavior: 'smooth'
       });
       setIsMenuOpen(false);
@@ -290,34 +291,36 @@ export default function Home() {
 
             {/* Main Content */}
             <main>
-              <section id="intro" className="min-h-screen flex items-center justify-center px-4 md:px-24 -mt-16">
-                <motion.div
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.2 }}
-                  className="text-center max-w-7xl mx-auto"
-                >
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={selectedAudience}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <p className="text-3xl md:text-6xl text-[#fefeff] leading-tight mb-12 max-w-3xl mx-auto">
-                        {audienceContent[selectedAudience].description}
-                      </p>
-                      <div className="flex gap-4 flex-wrap justify-center">
-                        {audienceContent[selectedAudience].skills.map((skill, index) => (
-                          <span key={index} className="text-sm text-[#969696]">
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                    </motion.div>
-                  </AnimatePresence>
-                </motion.div>
+              <section id="intro" className="min-h-screen px-4 md:px-24">
+                <div className="pt-32">
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.2 }}
+                    className="text-center max-w-7xl mx-auto"
+                  >
+                    <AnimatePresence mode="wait">
+                      <motion.div
+                        key={selectedAudience}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.5 }}
+                      >
+                        <p className="text-3xl md:text-6xl text-[#fefeff] leading-tight mb-12 max-w-3xl mx-auto">
+                          {audienceContent[selectedAudience].description}
+                        </p>
+                        <div className="flex gap-4 flex-wrap justify-center">
+                          {audienceContent[selectedAudience].skills.map((skill, index) => (
+                            <span key={index} className="text-sm text-[#969696]">
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </motion.div>
+                    </AnimatePresence>
+                  </motion.div>
+                </div>
               </section>
 
               {/* Work Section */}
