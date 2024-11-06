@@ -8,7 +8,7 @@ import { FcLinux } from "react-icons/fc";
 import { TbWorld } from "react-icons/tb";
 
 const spaceGrotesk = Space_Grotesk({
-  weight: ["400", "500", "600", "700"], // Increased font weights
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -247,7 +247,13 @@ export default function Home() {
                   Bangalore, India — {currentTime} IST
                 </div>
               </div>
-              <div className="relative md:static flex gap-4 md:gap-8 justify-start md:justify-center text-sm mb-8 overflow-x-auto scrollbar-hide px-4">
+              <div className="relative md:static flex gap-4 md:gap-8 justify-start md:justify-center text-sm mb-8 overflow-x-auto scrollbar-hide px-4" style={{
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none',
+                // WebkitScrollbar: {
+                //   display: 'none'
+                // }
+              }}>
                 {(['anyone', 'recruiters', 'engineers', 'product-managers'] as AudienceType[]).map((audience) => (
                   <button
                     key={audience}
