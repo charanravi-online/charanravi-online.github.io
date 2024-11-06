@@ -3,6 +3,9 @@ import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Space_Grotesk } from "@next/font/google";
 import Image from "next/image";
+import { FaWindows } from "react-icons/fa";
+import { FcLinux } from "react-icons/fc";
+import { TbWorld } from "react-icons/tb";
 
 const spaceGrotesk = Space_Grotesk({
   weight: ["400", "500", "600", "700"], // Increased font weights
@@ -22,13 +25,20 @@ const workProjects = [
     title: "Wiki",
     description: "A command-line tool to get Wikipedia summaries in your terminal",
     tags: ["Python", "Snapcraft", "WinGet"],
-    link: "https://snapcraft.io/wiki"
+    link: "https://snapcraft.io/wiki",
+    platforms: [
+      { icon: FaWindows, color: "#00A4EF" },
+      { icon: FcLinux }
+    ]
   },
   {
     title: "BTC Converter", 
     description: "A simple tool to convert Bitcoin to Sats",
     tags: ["Python", "JavaScript", "HTML", "CSS"],
-    link: "https://rates.bitcoin.org.hk/"
+    link: "https://rates.bitcoin.org.hk/",
+    platforms: [
+      { icon: TbWorld, color: "#4285F4" }
+    ]
   }
 ];
 
@@ -323,12 +333,21 @@ export default function Home() {
                             className="group"
                             whileHover={{ y: -10 }}
                           >
-                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="block p-4 md:p-8 border border-[#969696] rounded-lg hover:border-[#969696] transition-colors">
+                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="block p-4 md:p-8 border border-[#969696] rounded-lg hover:border-[#969696] transition-colors relative">
                               <h3 className="text-xl md:text-2xl font-medium mb-4">{project.title}</h3>
                               <p className="text-sm text-[#fefeff] mb-6">{project.description}</p>
                               <div className="flex flex-wrap gap-4">
                                 {project.tags.map((tag, tagIndex) => (
                                   <span key={tagIndex} className="text-sm text-[#969696]">{tag}</span>
+                                ))}
+                              </div>
+                              <div className="absolute top-4 right-4 flex gap-2">
+                                {project.platforms.map((Platform, i) => (
+                                  <Platform.icon 
+                                    key={i} 
+                                    className="text-xl"
+                                    style={Platform.color ? { color: Platform.color } : {}}
+                                  />
                                 ))}
                               </div>
                             </a>
@@ -400,9 +419,10 @@ export default function Home() {
                     <div className="md:col-span-1 md:col-start-2">
                       <div className="space-y-8">
                         <p className="text-sm text-[#fefeff]">
-                          I'm a Software Developer with 3 years of experience, currently based
-                          in India. I focus on creating minimal and effective solutions, while
-                          also mentoring others and composing music.
+                        I'm a software developer based in India with over 3 years of experience across brand and product, 
+                        at companies large and small.
+                        I take pride in my craft, and love mentoring earlier career developers. 
+                        I develop cross functional partnerships, and thrive in complex, ambiguous environments.
                         </p>
                       </div>
                     </div>
@@ -425,9 +445,8 @@ export default function Home() {
                     <div className="md:col-span-1 md:col-start-2">
                       <div className="space-y-8">
                         <p className="text-sm text-[#fefeff]">
-                          I'm a Software Developer with 3 years of experience, currently based
-                          in India. I focus on creating minimal and effective solutions, while
-                          also mentoring others and composing music.
+                          In my free time I try to challenge myself with new projects, learn new things, compose music,
+                          and solve some leetcode problems to keep my skills sharp and brain active.
                         </p>
                       </div>
                     </div>
@@ -435,8 +454,8 @@ export default function Home() {
                     <div className="md:col-span-1 md:col-start-3 md:mt-32">
                       <div className="space-y-8">
                         <p className="text-sm text-[#fefeff]">
-                          My approach combines technical expertise with creative problem-solving,
-                          always striving to build solutions that are both elegant and practical.
+                          Philosophy - "Simplicity is the ultimate sophistication" 
+                          or in other words, "less is more."
                         </p>
                       </div>
                     </div>
@@ -517,7 +536,7 @@ export default function Home() {
               <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                 <span className="text-sm text-center md:text-left">© 2024 Charan Ravi. All rights reserved.</span>
                 <div className="flex gap-4 md:gap-8">
-                <span className="text-sm text-center md:text-left">Design & Code by - Charan Ravi</span>
+                <span className="text-sm text-center md:text-left">Design & Code by - <a href="/" className="hover:text-[#fefeff] transition-colors">Charan Ravi</a></span>
                   {/* <a className="text-sm text-[#969696] hover:text-[#fefeff] transition-colors">made with ❤️ by charan</a> */}
                   {/* <a href="#" className="text-sm text-[#969696] hover:text-[#fefeff] transition-colors">Terms of Service</a> */}
                 </div>
