@@ -53,17 +53,17 @@ const audienceContent = {
   recruiters: {
     title: "Recruiters",
     description: "I'm a software dev with 3+ years of experience building software solutions. My expertise includes Python, JavaScript etc.",
-    skills: [<a href="/RCharan-Resume.pdf" download>Download Resume</a>]
+    skills: [<a href="/RCharan-Resume.pdf" download className="hover:text-[#fefeff] transition-colors">Download Resume</a>]
   },
   engineers: {
     title: "Engineers",
     description: "I'm passionate about technology, innovation and open source. Check out my technical deep-dives and coding projects.",
-    skills: [<a href="/RCharan-Resume.pdf" download>Download Resume</a>]
+    skills: [<a href="/RCharan-Resume.pdf" download className="hover:text-[#fefeff] transition-colors">Download Resume</a>]
   },
   'product-managers': {
     title: "Product Managers",
     description: "I bring technical expertise to product development, helping bridge the gap between business goals and technical implementation.",
-    skills: [<a href="/RCharan-Resume.pdf" download>Download Resume</a>]
+    skills: [<a href="/RCharan-Resume.pdf" download className="hover:text-[#fefeff] transition-colors">Download Resume</a>]
   }
 };
 
@@ -334,7 +334,7 @@ export default function Home() {
                 >
                   <div className="grid md:grid-cols-3 gap-8">
                     <div className="md:col-span-2 md:col-start-2">
-                      <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-2xl">Selected Work</h2>
+                      <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-2xl"></h2>
                       <div className="grid gap-8 md:gap-16 max-w-2xl">
                         {workProjects.map((project, index) => (
                           <motion.div
@@ -485,7 +485,7 @@ export default function Home() {
                     <div className="md:col-span-2 md:col-start-2">
                       <div className="space-y-8 max-w-2xl">
                         <Image
-                          src="/charan-ravi.jpg"
+                          src="/charan.JPG"
                           alt="Charan Ravi"
                           width={500}
                           height={300}
