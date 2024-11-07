@@ -74,6 +74,8 @@ export default function Home() {
   const [selectedAudience, setSelectedAudience] = useState<AudienceType>("anyone");
   const [isNameExpanded, setIsNameExpanded] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
     setTimeout(() => {
@@ -114,6 +116,20 @@ export default function Home() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+  }, []);
+
+  const handleHorizontalScroll = () => {
+    if (scrollContainerRef.current) {
+      setScrollPosition(scrollContainerRef.current.scrollLeft);
+    }
+  };
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener('scroll', handleHorizontalScroll);
+      return () => container.removeEventListener('scroll', handleHorizontalScroll);
+    }
   }, []);
 
   const scrollToSection = (sectionId: string) => {
@@ -248,26 +264,40 @@ export default function Home() {
                   Bangalore, India — {currentTime} IST
                 </div>
               </div>
-              <div className="relative md:static flex gap-4 md:gap-8 justify-start md:justify-center text-sm mb-8 overflow-x-auto scrollbar-hide px-4" style={{
-                scrollbarWidth: 'none',
-                msOverflowStyle: 'none',
-                // WebkitScrollbar: {
-                //   display: 'none'
-                // }
-              }}>
-                {(['anyone', 'recruiters', 'engineers', 'product-managers'] as AudienceType[]).map((audience) => (
-                  <button
-                    key={audience}
-                    onClick={() => setSelectedAudience(audience)}
-                    className={`transition-colors whitespace-nowrap ${
-                      selectedAudience === audience 
-                        ? 'text-[#fefeff] font-medium' 
-                        : 'text-[#969696] hover:text-[#fefeff]'
-                    }`}
-                  >
-                    {audienceContent[audience].title}
-                  </button>
-                ))}
+              <div className="relative md:static mb-8">
+                <div 
+                  className="absolute left-0 z-10 w-12 h-full bg-gradient-to-r from-black to-transparent pointer-events-none"
+                  style={{
+                    opacity: scrollPosition > 0 ? 1 : 0,
+                    transition: 'opacity 0.3s ease'
+                  }}
+                ></div>
+                <div className="absolute right-0 z-10 w-12 h-full bg-gradient-to-l from-black to-transparent pointer-events-none"></div>
+                <div 
+                  ref={scrollContainerRef}
+                  className="flex gap-4 md:gap-8 justify-start md:justify-center text-sm overflow-x-auto scrollbar-hide"
+                  style={{
+                    scrollbarWidth: 'none',
+                    msOverflowStyle: 'none',
+                    WebkitOverflowScrolling: 'touch',
+                    paddingLeft: '1rem',
+                    paddingRight: '1rem'
+                  }}
+                >
+                  {(['anyone', 'recruiters', 'engineers', 'product-managers'] as AudienceType[]).map((audience) => (
+                    <button
+                      key={audience}
+                      onClick={() => setSelectedAudience(audience)}
+                      className={`transition-colors whitespace-nowrap flex-shrink-0 ${
+                        selectedAudience === audience 
+                          ? 'text-[#fefeff] font-medium' 
+                          : 'text-[#969696] hover:text-[#fefeff]'
+                      }`}
+                    >
+                      {audienceContent[audience].title}
+                    </button>
+                  ))}
+                </div>
               </div>
             </header>
 
