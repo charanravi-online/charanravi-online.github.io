@@ -57,7 +57,20 @@ const audienceContent = {
   },
   engineers: {
     title: "Engineers",
-    description: "Driven by technology, innovation, and open source. Explore my technical deep dives and coding projects.",
+    description: (
+      <>
+        Driven by technology, innovation, and open source. Explore my technical deep dives and projects over at my{" "}
+        <a 
+          href="https://github.com/charanravi-online" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="transition-colors hover:text-sky-500"
+          style={{ display: "inline-flex", alignItems: "center" }}
+        >
+          GitHub &#x2197;
+        </a>
+      </>
+    ),
     skills: [<a href="/RCharan-Resume.pdf" download className="hover:text-[#fefeff] transition-colors">Download Resume</a>]
   },
   'product-managers': {
