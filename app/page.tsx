@@ -389,22 +389,15 @@ export default function Home() {
                       </div>
                       <div className="space-y-4 max-w-2xl">
                         <h3 className="text-xl font-medium text-[#fefeff]">Software Development Engineer in Test</h3>
-                        <p className="text-sm text-[#fefeff]">
+                        <p className="text-sm text-[#969696]">
                           I led a team to build an automation framework to test the LG AI Models, 
                           worked on the Open Source Edition of webOS (webOS OSE), and I am currently working 
                           on firmware updates under the Home Applicances & Air Solution dept.
                         </p>
-                        <p className="text-sm text-[#fefeff]">
+                        <p className="text-sm text-[#969696]">
                           Key achievements include implementing responsive designs, optimizing performance, and collaborating with cross-functional teams 
                           to deliver high-quality software solutions.
                         </p>
-                        <div className="flex flex-wrap gap-3">
-                          <span className="text-sm text-[#969696]">Python</span>
-                          <span className="text-sm text-[#969696]">JavaScript</span>
-                          <span className="text-sm text-[#969696]">Electron</span>
-                          <span className="text-sm text-[#969696]">Appium</span>
-                          <span className="text-sm text-[#969696]">Selenium</span>
-                        </div>
                       </div>
                     </div>
                   </div>
