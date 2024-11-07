@@ -18,6 +18,9 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 @layer utilities {
@@ -95,4 +98,19 @@ body {
 
 .fixed-sidebar a:hover {
   background-color: rgba(106, 90, 205, 0.2); /* Hover effect */
+}
+
+#root, #__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
 }

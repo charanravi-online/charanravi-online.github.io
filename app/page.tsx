@@ -136,7 +136,7 @@ export default function Home() {
   const remainingLetters = "haran Ravi".split("");
 
   return (
-    <div className={`${spaceGrotesk.className} bg-black text-[#fefeff]`}>
+    <div className={`${spaceGrotesk.className} bg-black text-[#fefeff] flex flex-col min-h-screen`}>
       <AnimatePresence mode="wait">
         {loading ? (
           <motion.div
@@ -168,7 +168,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="relative"
+            className="flex-grow"
           >
             {/* Logo */}
             <motion.div 
@@ -300,7 +300,7 @@ export default function Home() {
             </nav>
 
             {/* Main Content */}
-            <main>
+            <main className="flex-grow">
               <section id="intro" className="min-h-screen px-4 md:px-24">
                 <div className="pt-32">
                   <motion.div
@@ -548,9 +548,7 @@ export default function Home() {
               <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                 <span className="text-sm text-center md:text-left">© 2024 Charan Ravi. All rights reserved.</span>
                 <div className="flex gap-4 md:gap-8">
-                <span className="text-sm text-center md:text-left">Design & Code by - <a href="/" className="hover:text-[#fefeff] transition-colors">Charan Ravi</a></span>
-                  {/* <a className="text-sm text-[#969696] hover:text-[#fefeff] transition-colors">made with ❤️ by charan</a> */}
-                  {/* <a href="#" className="text-sm text-[#969696] hover:text-[#fefeff] transition-colors">Terms of Service</a> */}
+                  <span className="text-sm text-center md:text-left">Design & Code by - <a href="/" className="hover:text-[#fefeff] transition-colors">Charan Ravi</a></span>
                 </div>
               </div>
             </footer>
