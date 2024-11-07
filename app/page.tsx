@@ -70,7 +70,6 @@ const audienceContent = {
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [activeSection, setActiveSection] = useState("intro");
-  const [currentTime, setCurrentTime] = useState("");
   const [selectedAudience, setSelectedAudience] = useState<AudienceType>("anyone");
   const [isNameExpanded, setIsNameExpanded] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -81,20 +80,6 @@ export default function Home() {
     setTimeout(() => {
       setLoading(false);
     }, 2500);
-
-    const updateTime = () => {
-      const now = new Date();
-      setCurrentTime(now.toLocaleTimeString('en-US', { 
-        timeZone: 'Asia/Kolkata',
-        hour12: true,
-        hour: 'numeric',
-        minute: 'numeric'
-      }));
-    };
-
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
@@ -259,11 +244,6 @@ export default function Home() {
 
             {/* Header */}
             <header className="p-4 md:p-8 pt-24 md:pt-8">
-              <div className="hidden md:flex justify-end mb-6">
-                <div className="text-sm text-[#969696]">
-                  Bangalore, India — {currentTime} IST
-                </div>
-              </div>
               <div className="relative md:static mb-8">
                 <div 
                   className="absolute left-0 z-10 w-12 h-full bg-gradient-to-r from-black to-transparent pointer-events-none"
