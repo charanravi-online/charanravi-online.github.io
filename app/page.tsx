@@ -23,8 +23,8 @@ const sections = [
 const workProjects = [
   {
     title: "Wiki",
-    description: "A command-line tool to get Wikipedia summaries in your terminal",
-    tags: ["Python", "Snapcraft", "WinGet"],
+    description: "A command-line tool to get Wikipedia summaries in your terminal - Powered By Gemini AI",
+    tags: ["Python", "Snapcraft", "WinGet", "Gemini AI"],
     link: "https://snapcraft.io/wiki",
     platforms: [
       { icon: FaWindows, color: "#00A4EF" },
@@ -33,7 +33,7 @@ const workProjects = [
   },
   {
     title: "BTC Converter", 
-    description: "A simple tool to convert Bitcoin to Sats",
+    description: "A Basic Bitcoin to Fiat converter with price feeds from Coindesk",
     tags: ["Python", "JavaScript", "HTML", "CSS"],
     link: "https://rates.bitcoin.org.hk/",
     platforms: [
@@ -47,22 +47,22 @@ type AudienceType = 'anyone' | 'recruiters' | 'engineers' | 'product-managers';
 const audienceContent = {
   anyone: {
     title: "For Anyone",
-    description: "I'm a developer who loves creating meaningful digital experiences. I'm a sucker for tech, minimalism, and the intersection of both.",
+    description: "I'm a developer who loves creating meaningful digital experiences, with a focus on tech, minimalism, and where they intersect.",
     skills: [""]
   },
   recruiters: {
     title: "Recruiters",
-    description: "I'm a software dev with 3+ years of experience building software solutions. My expertise includes Python, JavaScript etc.",
+    description: "software developer with 3+ years of experience building software solutions. My expertise includes Python, JavaScript etc.",
     skills: [<a href="/RCharan-Resume.pdf" download className="hover:text-[#fefeff] transition-colors">Download Resume</a>]
   },
   engineers: {
     title: "Engineers",
-    description: "I'm passionate about technology, innovation and open source. Check out my technical deep-dives and coding projects.",
+    description: "Driven by technology, innovation, and open source. Explore my technical deep dives and coding projects.",
     skills: [<a href="/RCharan-Resume.pdf" download className="hover:text-[#fefeff] transition-colors">Download Resume</a>]
   },
   'product-managers': {
     title: "Product Managers",
-    description: "I bring technical expertise to product development, helping bridge the gap between business goals and technical implementation.",
+    description: "I bring technical expertise to product development, bridging the gap between business objectives and technical execution.",
     skills: [<a href="/RCharan-Resume.pdf" download className="hover:text-[#fefeff] transition-colors">Download Resume</a>]
   }
 };
@@ -402,7 +402,7 @@ export default function Home() {
                         <p className="text-sm text-[#969696]">
                           I led a team to build an automation framework to test the LG AI Models, 
                           worked on the Open Source Edition of webOS (webOS OSE), and I am currently working 
-                          on firmware updates under the Home Applicances & Air Solution dept.
+                          on firmware updates under the Home Applicance & Air Solution dept.
                         </p>
                         <p className="text-sm text-[#969696]">
                           Key achievements include implementing responsive designs, optimizing performance, and collaborating with cross-functional teams 
@@ -427,6 +427,7 @@ export default function Home() {
                   viewport={{ once: true }}
                   className="max-w-5xl"
                 >
+                  <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-2xl"></h2>
                   <div className="grid md:grid-cols-3 gap-8">
                     <div className="md:col-span-1 md:col-start-2">
                       <div className="space-y-8">
@@ -435,6 +436,7 @@ export default function Home() {
                         at companies large and small.
                         I take pride in my craft, and love mentoring earlier career developers. 
                         I develop cross functional partnerships, and thrive in complex, ambiguous environments.
+                        
                         </p>
                       </div>
                     </div>
@@ -442,16 +444,18 @@ export default function Home() {
                     <div className="md:col-span-1 md:col-start-3 md:mt-32">
                       <div className="space-y-8">
                         <p className="text-sm text-[#fefeff]">
-                          My approach combines technical expertise with creative problem-solving,
+                        My approach combines technical expertise with creative problem-solving,
                           always striving to build solutions that are both elegant and practical.
+                          Zooming out on company strategy, zooming in on details.
+                          
                         </p>
                       </div>
                     </div>
                   </div>
 
                   <br />
-                  <br />
-                  <br />
+                  {/* <br />
+                  <br /> */}
                   
                   <div className="grid md:grid-cols-3 gap-8">
                     <div className="md:col-span-1 md:col-start-2">
@@ -466,8 +470,9 @@ export default function Home() {
                     <div className="md:col-span-1 md:col-start-3 md:mt-32">
                       <div className="space-y-8">
                         <p className="text-sm text-[#fefeff]">
-                          Philosophy - "Simplicity is the ultimate sophistication" 
-                          or in other words, "less is more."
+                          Creating something from the ground up and watching it grow is incredibly fulfilling.
+                          Engaging in this process with passion feels almost spiritual.
+                          I love that feeling.
                         </p>
                       </div>
                     </div>
