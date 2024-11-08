@@ -52,7 +52,7 @@ const audienceContent = {
   },
   recruiters: {
     title: "Recruiters",
-    description: "software developer with 3+ years of experience building software solutions. My expertise includes Python, JavaScript etc.",
+    description: "Software developer with 3+ years of experience building software solutions. My expertise includes Python, JavaScript etc.",
     skills: [<a href="/RCharan-Resume.pdf" download className="hover:text-[#fefeff] transition-colors">Download Resume</a>]
   },
   engineers: {
