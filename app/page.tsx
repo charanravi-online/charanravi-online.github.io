@@ -3,9 +3,10 @@ import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Space_Grotesk } from "@next/font/google";
 import Image from "next/image";
-import { FaWindows } from "react-icons/fa";
+import { FaBitcoin, FaWindows } from "react-icons/fa";
 import { FcLinux } from "react-icons/fc";
 import { TbWorld } from "react-icons/tb";
+import { FaXTwitter } from "react-icons/fa6";
 
 const spaceGrotesk = Space_Grotesk({
   weight: ["400", "500", "600", "700"],
@@ -37,7 +38,17 @@ const workProjects = [
     tags: ["Python", "JavaScript", "HTML", "CSS"],
     link: "https://rates.bitcoin.org.hk/",
     platforms: [
-      { icon: TbWorld, color: "#4285F4" }
+      // { icon: TbWorld, color: "#4285F4" },
+      { icon: FaBitcoin, color: "#F7931A" }
+    ]
+  },
+  {
+    title: "BotPool", 
+    description: "An X (Twitter) bot that responds to mentions with witty Deadpool-style quips and one-liners",
+    tags: ["Python", "X", "Twitter API"],
+    link: "https://x.com/botpool",
+    platforms: [
+      { icon: FaXTwitter, color: "#fefeff" }
     ]
   }
 ];
@@ -52,7 +63,15 @@ const audienceContent = {
   },
   recruiters: {
     title: "Recruiters",
-    description: "Software developer with 3+ years of experience building software solutions. My expertise includes Python, JavaScript etc.",
+    description: (
+      <>
+        Software developer with 3+ years of experience building software solutions. My expertise includes{" "}
+        <span className="hover:text-[#3776AB] transition-colors cursor-default">Python</span>
+        {", "}
+        <span className="hover:text-[#F7DF1E] transition-colors cursor-default">JavaScript</span>
+        {" "}etc.
+      </>
+    ),
     skills: [<a href="/RCharan-Resume.pdf" download className="hover:text-[#fefeff] transition-colors">Download Resume</a>]
   },
   engineers: {
