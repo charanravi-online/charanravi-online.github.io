@@ -38,15 +38,15 @@ const workProjects = [
     tags: ["Python", "JavaScript", "HTML", "CSS"],
     link: "https://rates.bitcoin.org.hk/",
     platforms: [
-      // { icon: TbWorld, color: "#4285F4" },
-      { icon: FaBitcoin, color: "#F7931A" }
+      { icon: TbWorld, color: "#4285F4" },
+      // { icon: FaBitcoin, color: "#F7931A" }
     ]
   },
   {
     title: "BotPool", 
     description: "An X (Twitter) bot that responds to mentions with witty Deadpool-style quips and one-liners",
     tags: ["Python", "X", "Twitter API"],
-    link: "https://x.com/botpool",
+    link: "https://github.com/charanravi-online/BotPool",
     platforms: [
       { icon: FaXTwitter, color: "#fefeff" }
     ]
