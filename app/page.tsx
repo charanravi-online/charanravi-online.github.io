@@ -438,10 +438,10 @@
                             worked on the Open Source Edition of webOS (webOS OSE), and I am currently working 
                             on firmware updates under the Home Applicance & Air Solution dept.
                           </p>
-                          <p className="text-sm text-[#969696]">
+                          {/* <p className="text-sm text-[#969696]">
                             Key achievements include implementing responsive designs, optimizing performance, and collaborating with cross-functional teams 
                             to deliver high-quality software solutions.
-                          </p>
+                          </p> */}
                         </div>
                         <br />
                         <br />
