@@ -26,7 +26,7 @@
       title: "Wiki",
       description: "A command-line tool to get Wikipedia summaries in your terminal - Powered By Gemini AI",
       tags: ["Python", "Snapcraft", "WinGet", "Gemini AI"],
-      link: "https://snapcraft.io/wiki",
+      link: "https://charanravi-online.github.io/wiki_project",
       platforms: [
         { icon: FaWindows, color: "#00A4EF" },
         { icon: FcLinux }
@@ -609,7 +609,7 @@
               {/* Footer */}
               <footer className="px-4 md:px-24 py-8 text-[#969696] md:ml-16">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                  <span className="text-sm text-center md:text-left">© 2024 Charan Ravi. All rights reserved.</span>
+                  <span className="text-sm text-center md:text-left">© 2025 Charan Ravi. All rights reserved.</span>
                   <div className="flex gap-4 md:gap-8">
                     <span className="text-sm text-center md:text-left">Design & Code by - <a href="/" className="hover:text-[#fefeff] transition-colors">Charan Ravi</a></span>
                   </div>
