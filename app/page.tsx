@@ -1,4 +1,4 @@
-  "use client";
+"use client";
   import { useEffect, useState, useRef } from "react";
   import { motion, AnimatePresence } from "framer-motion";
   import { Space_Grotesk } from "next/font/google";
@@ -334,7 +334,7 @@
               {/* Main Content */}
               <main className="flex-grow">
                 <section id="intro" className="min-h-screen px-4 md:px-24">
-                  <div className="pt-16 pb-8">
+                  <div className="pt-16 pb-8"> {/* Adjusted padding-bottom to 8 */}
                     <motion.div
                       initial={{ y: 20, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
@@ -366,7 +366,7 @@
                 </section>
 
                 {/* Work Section */}
-                <section id="work" className="min-h-screen px-4 md:px-24 py-8 md:py-32 md:ml-16">
+                <section id="work" className="min-h-screen px-4 md:px-24 py-8 md:py-32 md:ml-16"> {/* Adjusted padding-top to 8 */}
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
@@ -376,7 +376,7 @@
                   >
                     <div className="grid md:grid-cols-3 gap-8">
                       <div className="md:col-span-2 md:col-start-2">
-                        <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-2xl">wrk.</h2>
+                        <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-2xl">work.</h2>
                         <div className="grid gap-8 md:gap-16 max-w-2xl">
                           {workProjects.map((project, index) => (
                             <motion.div
@@ -426,8 +426,9 @@
                           <Image
                             src="/LGE_Logo_Mono_White_RGB_cropped.png"
                             alt="LG Electronics Logo"
-                            layout="fill"
-                            objectFit="contain"
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            style={{ objectFit: "contain" }}
                           />
                         </div>
                         <div className="space-y-4 max-w-2xl">
@@ -452,8 +453,9 @@
                             <Image
                               src="/bahk-logo-big-white.svg"
                               alt="Bitcoin Association of Hong Kong Logo"
-                              layout="fill"
-                              objectFit="contain"
+                              fill
+                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                              style={{ objectFit: "contain" }}
                             />
                           </div>
                           <div className="space-y-4 max-w-2xl">
@@ -486,7 +488,7 @@
                     viewport={{ once: true }}
                     className="max-w-5xl"
                   >
-                    <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-2xl">abt.</h2>
+                    <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-2xl">about.</h2>
                     <div className="grid md:grid-cols-3 gap-8">
                       <div className="md:col-span-1 md:col-start-2">
                         <div className="space-y-8">
@@ -513,8 +515,8 @@
                     </div>
 
                     {/* <br /> */}
-                    {/* <br />
-                    <br /> */}
+                    <br />
+                    <br />
                     
                     <div className="grid md:grid-cols-3 gap-8">
                       <div className="md:col-span-1 md:col-start-2">
