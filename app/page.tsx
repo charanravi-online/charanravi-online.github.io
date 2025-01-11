@@ -334,7 +334,7 @@
               {/* Main Content */}
               <main className="flex-grow">
                 <section id="intro" className="min-h-screen px-4 md:px-24">
-                  <div className="pt-32">
+                  <div className="pt-16 pb-8">
                     <motion.div
                       initial={{ y: 20, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
@@ -366,7 +366,7 @@
                 </section>
 
                 {/* Work Section */}
-                <section id="work" className="min-h-screen px-4 md:px-24 py-16 md:py-32 md:ml-16">
+                <section id="work" className="min-h-screen px-4 md:px-24 py-8 md:py-32 md:ml-16">
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
