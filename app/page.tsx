@@ -1,7 +1,7 @@
   "use client";
   import { useEffect, useState, useRef } from "react";
   import { motion, AnimatePresence } from "framer-motion";
-  import { Space_Grotesk } from "@next/font/google";
+  import { Space_Grotesk } from "next/font/google";
   import Image from "next/image";
   import { FaBitcoin, FaWindows } from "react-icons/fa";
   import { FcLinux } from "react-icons/fc";

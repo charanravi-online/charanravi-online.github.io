@@ -1,5 +1,5 @@
 "use client";
-import { Source_Code_Pro } from "@next/font/google";
+import { Source_Code_Pro } from "next/font/google";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AiOutlineHome } from "react-icons/ai";
