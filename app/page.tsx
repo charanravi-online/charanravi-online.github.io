@@ -376,7 +376,7 @@
                   >
                     <div className="grid md:grid-cols-3 gap-8">
                       <div className="md:col-span-2 md:col-start-2">
-                        <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-2xl"></h2>
+                        <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-2xl">wrk.</h2>
                         <div className="grid gap-8 md:gap-16 max-w-2xl">
                           {workProjects.map((project, index) => (
                             <motion.div
@@ -421,6 +421,7 @@
                   >
                     <div className="grid md:grid-cols-3 gap-8">
                       <div className="md:col-span-2 md:col-start-2">
+                      <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-2xl"></h2>
                         <div className="relative w-48 h-40 flex-shrink-0 mb-4">
                           <Image
                             src="/LGE_Logo_Mono_White_RGB_cropped.png"
@@ -471,10 +472,10 @@
                     </div>
                   </motion.div>
                 </section>
+                {/* <br /> */}
+                {/* <br />
                 <br />
-                <br />
-                <br />
-                <br />
+                <br /> */}
 
                 {/* About Section */}
                 <section id="about" className="min-h-screen px-4 md:px-24 py-16 md:py-32 md:ml-16">
@@ -485,7 +486,7 @@
                     viewport={{ once: true }}
                     className="max-w-5xl"
                   >
-                    <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-2xl"></h2>
+                    <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-2xl">abt.</h2>
                     <div className="grid md:grid-cols-3 gap-8">
                       <div className="md:col-span-1 md:col-start-2">
                         <div className="space-y-8">
@@ -511,7 +512,7 @@
                       </div>
                     </div>
 
-                    <br />
+                    {/* <br /> */}
                     {/* <br />
                     <br /> */}
                     
@@ -529,8 +530,7 @@
                         <div className="space-y-8">
                           <p className="text-sm text-[#fefeff]">
                             Creating something from the ground up and watching it grow is incredibly fulfilling.
-                            Engaging in this process with passion feels almost spiritual.
-                            I love that feeling.
+                            Engaging in this process with passion feels almost spiritual to me.
                           </p>
                         </div>
                       </div>
