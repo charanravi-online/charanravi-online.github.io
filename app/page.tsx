@@ -26,7 +26,7 @@
       title: "Wiki",
       description: "A command-line tool to get Wikipedia summaries in your terminal - Powered By Gemini AI",
       tags: ["Python", "Snapcraft", "WinGet", "Gemini AI"],
-      link: "https://charanravi-online.github.io/wiki_project",
+      link: "https://charanravi-online.github.io/wiki-project",
       platforms: [
         { icon: FaWindows, color: "#00A4EF" },
         { icon: FcLinux }
