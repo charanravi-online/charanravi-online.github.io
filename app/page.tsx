@@ -366,7 +366,7 @@
                 </section>
 
                 {/* Work Section */}
-                <section id="work" className="min-h-screen px-4 md:px-24 py-8 md:py-32 md:ml-16"> {/* Adjusted padding-top to 8 */}
+                <section id="work" className="min-h-screen px-4 md:px-24 py-8 md:py-16 md:ml-16 pt-20">
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
@@ -411,7 +411,7 @@
                 </section>
 
                 {/* Background Section */}
-                <section id="background" className="min-h-screen px-4 md:px-24 py-16 md:py-32 md:ml-16">
+                <section id="background" className="min-h-screen px-4 md:px-24 py-8 md:py-24 md:ml-16">
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
