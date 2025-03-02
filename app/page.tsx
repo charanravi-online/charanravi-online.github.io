@@ -36,7 +36,7 @@
       title: "BTC Converter", 
       description: "A Basic Bitcoin to Fiat converter with price feeds from Coindesk",
       tags: ["Python", "JavaScript", "HTML", "CSS"],
-      link: "https://rates.bitcoin.org.hk/",
+      link: "https://github.com/bitkarrot/satsconverter",
       platforms: [
         { icon: TbWorld, color: "#4285F4" },
         // { icon: FaBitcoin, color: "#F7931A" }
