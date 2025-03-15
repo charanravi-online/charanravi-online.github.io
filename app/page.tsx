@@ -559,7 +559,7 @@
                             height={300}
                             className="mb-8"
                           />
-                          <p className="text-xl md:text-xl text-[#fefeff] underline">charanravi.online@gmail.com</p>
+                          <p className="text-xl md:text-xl text-[#fefeff] underline">contact@charanravi.com</p>
                           <div className="flex items-center gap-2">
                             <div className="relative">
                               <div className="w-2 h-2 bg-[#fefeff] rounded-full animate-pulse"></div>
