@@ -407,7 +407,7 @@
                 </section>
 
                 {/* Background Section */}
-                <section id="background" className="min-h-screen px-4 md:px-24 py-8 md:py-24">
+                <section id="background" className="min-h-screen px-4 md:px-24 py-8 md:py-16 pt-20">
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
@@ -464,7 +464,7 @@
                 </section>
 
                 {/* About Section */}
-                <section id="about" className="min-h-screen px-4 md:px-24 py-16 md:py-32">
+                <section id="about" className="min-h-screen px-4 md:px-24 py-8 md:py-16 pt-20">
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
@@ -522,7 +522,7 @@
                 </section>
 
                 {/* Contact Section */}
-                <section id="contact" className="min-h-screen px-4 md:px-24 py-16 md:py-32">
+                <section id="contact" className="min-h-screen px-4 md:px-24 py-8 md:py-16 pt-20">
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
@@ -546,12 +546,12 @@
                         </div>
                         <p className="text-l text-[#969696]">Looking for new opportunities.</p>
                       </div>
-                      <div className="flex gap-8 pt-8 justify-center">
+                      <div className="flex flex-wrap gap-4 md:gap-8 pt-8 justify-center">
                         <a
                           href="https://www.linkedin.com/in/r-charan/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm"
+                          className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm px-2 py-1"
                         >
                           LinkedIn
                         </a>
@@ -559,7 +559,7 @@
                           href="https://github.com/charanravi-online"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm"
+                          className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm px-2 py-1"
                         >
                           GitHub
                         </a>
@@ -567,7 +567,7 @@
                           href="https://x.com/charanjson"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm"
+                          className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm px-2 py-1"
                         >
                           X [Twitter]
                         </a>
@@ -575,9 +575,25 @@
                           href="https://instagram.com/charan.json"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm"
+                          className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm px-2 py-1"
                         >
                           Instagram
+                        </a>
+                        <a
+                          href="https://blog.charanravi.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm px-2 py-1"
+                        >
+                          Blog
+                        </a>
+                        <a
+                          href="https://journal.charanravi.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm px-2 py-1"
+                        >
+                          Journal
                         </a>
                       </div>
                     </div>
