@@ -366,160 +366,141 @@
                 </section>
 
                 {/* Work Section */}
-                <section id="work" className="min-h-screen px-4 md:px-24 py-8 md:py-16 md:ml-16 pt-20">
+                <section id="work" className="min-h-screen px-4 md:px-24 py-8 md:py-16 pt-20">
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="max-w-5xl"
+                    className="max-w-5xl mx-auto"
                   >
-                    <div className="grid md:grid-cols-3 gap-8">
-                      <div className="md:col-span-2 md:col-start-2">
-                        <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-2xl">work.</h2>
-                        <div className="grid gap-8 md:gap-16 max-w-2xl">
-                          {workProjects.map((project, index) => (
-                            <motion.div
-                              key={index}
-                              className="group"
-                              whileHover={{ y: -10 }}
-                            >
-                              <a href={project.link} target="_blank" rel="noopener noreferrer" className="block p-4 md:p-8 border border-[#969696] rounded-lg hover:border-[#969696] transition-colors relative">
-                                <h3 className="text-xl md:text-2xl font-medium mb-4">{project.title}</h3>
-                                <p className="text-sm text-[#fefeff] mb-6">{project.description}</p>
-                                <div className="flex flex-wrap gap-4">
-                                  {project.tags.map((tag, tagIndex) => (
-                                    <span key={tagIndex} className="text-sm text-[#969696]">{tag}</span>
-                                  ))}
-                                </div>
-                                <div className="absolute top-4 right-4 flex gap-2">
-                                  {project.platforms.map((Platform, i) => (
-                                    <Platform.icon 
-                                      key={i} 
-                                      className="text-xl"
-                                      style={Platform.color ? { color: Platform.color } : {}}
-                                    />
-                                  ))}
-                                </div>
-                              </a>
-                            </motion.div>
-                          ))}
-                        </div>
-                      </div>
+                    <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-2xl">work.</h2>
+                    <div className="grid gap-8 md:gap-16 max-w-2xl mx-auto">
+                      {workProjects.map((project, index) => (
+                        <motion.div
+                          key={index}
+                          className="group"
+                          whileHover={{ y: -10 }}
+                        >
+                          <a href={project.link} target="_blank" rel="noopener noreferrer" className="block p-4 md:p-8 border border-[#969696] rounded-lg hover:border-[#969696] transition-colors relative">
+                            <h3 className="text-xl md:text-2xl font-medium mb-4">{project.title}</h3>
+                            <p className="text-sm text-[#fefeff] mb-6">{project.description}</p>
+                            <div className="flex flex-wrap gap-4">
+                              {project.tags.map((tag, tagIndex) => (
+                                <span key={tagIndex} className="text-sm text-[#969696]">{tag}</span>
+                              ))}
+                            </div>
+                            <div className="absolute top-4 right-4 flex gap-2">
+                              {project.platforms.map((Platform, i) => (
+                                <Platform.icon 
+                                  key={i} 
+                                  className="text-xl"
+                                  style={Platform.color ? { color: Platform.color } : {}}
+                                />
+                              ))}
+                            </div>
+                          </a>
+                        </motion.div>
+                      ))}
                     </div>
                   </motion.div>
                 </section>
 
                 {/* Background Section */}
-                <section id="background" className="min-h-screen px-4 md:px-24 py-8 md:py-24 md:ml-16">
+                <section id="background" className="min-h-screen px-4 md:px-24 py-8 md:py-24">
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="max-w-5xl"
+                    className="max-w-5xl mx-auto"
                   >
-                    <div className="grid md:grid-cols-3 gap-8">
-                      <div className="md:col-span-2 md:col-start-2">
-                      <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-2xl"></h2>
-                        <div className="relative w-48 h-40 flex-shrink-0 mb-4">
+                    <div className="max-w-2xl mx-auto">
+                      <div className="relative w-48 h-40 flex-shrink-0 mb-4">
+                        <Image
+                          src="/LGE_Logo_Mono_White_RGB_cropped.png"
+                          alt="LG Electronics Logo"
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          style={{ objectFit: "contain" }}
+                        />
+                      </div>
+                      <div className="space-y-4">
+                        <p className="font-mono text-sm text-[#969696]">LG SOFT INDIA</p>
+                        <h3 className="text-4xl font-medium text-[#fefeff]">Software Development Engineer in Test</h3>
+                        <p className="text-sm text-[#fefeff]">NOW &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bangalore</p>
+                        <p className="text-sm text-[#969696]">
+                          I led a team to build an automation framework to test the LG AI Models, 
+                          worked on the Open Source Edition of webOS (webOS OSE), and I am currently working 
+                          on firmware updates under the Home Applicance & Air Solution dept.
+                        </p>
+                      </div>
+                      <br />
+                      <br />
+                      <br />
+                      <div className="mt-16">
+                        <div className="relative w-24 h-24 flex-shrink-0 mb-8">
                           <Image
-                            src="/LGE_Logo_Mono_White_RGB_cropped.png"
-                            alt="LG Electronics Logo"
+                            src="/bahk-logo-big-white.svg"
+                            alt="Bitcoin Association of Hong Kong Logo"
                             fill
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             style={{ objectFit: "contain" }}
                           />
                         </div>
-                        <div className="space-y-4 max-w-2xl">
-                          <p className="font-mono text-sm text-[#969696]">LG SOFT INDIA</p>
-                          <h3 className="text-4xl font-medium text-[#fefeff]">Software Development Engineer in Test</h3>
-                          <p className="text-sm text-[#fefeff]">NOW &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bangalore</p>
+                        <div className="space-y-4">
+                          <p className="font-mono text-sm text-[#969696]">THE BITCOIN ASSOCIATION OF HONG KONG</p>
+                          <h3 className="text-4xl font-medium text-[#fefeff]">Software Developer</h3>
+                          <p className="text-sm text-[#fefeff]">2023 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remote</p>
                           <p className="text-sm text-[#969696]">
-                            I led a team to build an automation framework to test the LG AI Models, 
-                            worked on the Open Source Edition of webOS (webOS OSE), and I am currently working 
-                            on firmware updates under the Home Applicance & Air Solution dept.
+                            I contributed to the Bitcoin Association of Hong Kong's open source repository by fixing several 
+                            critical issues, optimizing site performance, and improving the accuracy of their Bitcoin price 
+                            conversion tools and web applications.
                           </p>
-                          {/* <p className="text-sm text-[#969696]">
-                            Key achievements include implementing responsive designs, optimizing performance, and collaborating with cross-functional teams 
-                            to deliver high-quality software solutions.
-                          </p> */}
-                        </div>
-                        <br />
-                        <br />
-                        <br />
-                        <div className="mt-16">
-                        <div className="relative w-24 h-24 flex-shrink-0 mb-8 pl-12">
-                            <Image
-                              src="/bahk-logo-big-white.svg"
-                              alt="Bitcoin Association of Hong Kong Logo"
-                              fill
-                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                              style={{ objectFit: "contain" }}
-                            />
-                          </div>
-                          <div className="space-y-4 max-w-2xl">
-                            <p className="font-mono text-sm text-[#969696]">THE BITCOIN ASSOCIATION OF HONG KONG</p>
-                            <h3 className="text-4xl font-medium text-[#fefeff]">Software Developer</h3>
-                            <p className="text-sm text-[#fefeff]">2023 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remote</p>
-                            <p className="text-sm text-[#969696]">
-                              I contributed to the Bitcoin Association of Hong Kong's open source repository by fixing several 
-                              critical issues, optimizing site performance, and improving the accuracy of their Bitcoin price 
-                              conversion tools and web applications.
-                            </p>
-                            
-                          </div>
                         </div>
                       </div>
                     </div>
                   </motion.div>
                 </section>
-                {/* <br /> */}
-                {/* <br />
-                <br />
-                <br /> */}
 
                 {/* About Section */}
-                <section id="about" className="min-h-screen px-4 md:px-24 py-16 md:py-32 md:ml-16">
+                <section id="about" className="min-h-screen px-4 md:px-24 py-16 md:py-32">
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="max-w-5xl"
+                    className="max-w-5xl mx-auto"
                   >
-                    <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-2xl">about.</h2>
-                    <div className="grid md:grid-cols-3 gap-8">
-                      <div className="md:col-span-1 md:col-start-2">
+                    <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-4xl mx-auto">about.</h2>
+                    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                      <div>
                         <div className="space-y-8">
                           <p className="text-sm text-[#fefeff]">
                           I'm a software developer based in India with over 3 years of experience across brand and product, 
                           at companies large and small.
                           I take pride in my craft, and love mentoring earlier career developers. 
                           I develop cross functional partnerships, and thrive in complex, ambiguous environments.
-                          
                           </p>
                         </div>
                       </div>
                       
-                      <div className="md:col-span-1 md:col-start-3 md:mt-32">
+                      <div className="md:mt-32">
                         <div className="space-y-8">
                           <p className="text-sm text-[#fefeff]">
                           My approach combines technical expertise with creative problem-solving,
                             always striving to build solutions that are both elegant and practical.
                             Zooming out on company strategy, zooming in on details.
-                            
                           </p>
                         </div>
                       </div>
                     </div>
 
-                    {/* <br /> */}
                     <br />
                     <br />
                     
-                    <div className="grid md:grid-cols-3 gap-8">
-                      <div className="md:col-span-1 md:col-start-2">
+                    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                      <div>
                         <div className="space-y-8">
                           <p className="text-sm text-[#fefeff]">
                             In my free time I try to challenge myself with new projects, learn new things, compose music,
@@ -528,7 +509,7 @@
                         </div>
                       </div>
                       
-                      <div className="md:col-span-1 md:col-start-3 md:mt-32">
+                      <div className="md:mt-32">
                         <div className="space-y-8">
                           <p className="text-sm text-[#fefeff]">
                             Creating something from the ground up and watching it grow is incredibly fulfilling.
@@ -541,67 +522,63 @@
                 </section>
 
                 {/* Contact Section */}
-                <section id="contact" className="min-h-screen px-4 md:px-24 py-16 md:py-32 md:ml-16">
+                <section id="contact" className="min-h-screen px-4 md:px-24 py-16 md:py-32">
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="max-w-5xl"
+                    className="max-w-5xl mx-auto"
                   >
-                    <div className="grid md:grid-cols-3 gap-8">
-                      <div className="md:col-span-2 md:col-start-2">
-                        <div className="space-y-8 max-w-2xl">
-                          <Image
-                            src="/charan.JPG"
-                            alt="Charan Ravi"
-                            width={500}
-                            height={300}
-                            className="mb-8"
-                          />
-                          <p className="text-xl md:text-xl text-[#fefeff] underline">contact@charanravi.com</p>
-                          <div className="flex items-center gap-2">
-                            <div className="relative">
-                              <div className="w-2 h-2 bg-[#fefeff] rounded-full animate-pulse"></div>
-                              <div className="absolute top-0 left-0 w-2 h-2 bg-[#fefeff] rounded-full animate-[ping_1.5s_ease-in-out_infinite] opacity-90"></div>
-                            </div>
-                            <p className="text-l text-[#969696]">Looking for new opportunities.</p>
-                          </div>
-                          <div className="flex gap-8 pt-8">
-                            <a
-                              href="https://www.linkedin.com/in/r-charan/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm"
-                            >
-                              LinkedIn
-                            </a>
-                            <a
-                              href="https://github.com/charanravi-online"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm"
-                            >
-                              GitHub
-                            </a>
-                            <a
-                              href="https://x.com/charanjson"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm"
-                            >
-                              X [Twitter]
-                            </a>
-                            <a
-                              href="https://instagram.com/charan.json"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm"
-                            >
-                              Instagram
-                            </a>
-                          </div>
+                    <div className="max-w-2xl mx-auto">
+                      <Image
+                        src="/charan.JPG"
+                        alt="Charan Ravi"
+                        width={500}
+                        height={300}
+                        className="mb-8 mx-auto"
+                      />
+                      <p className="text-xl md:text-xl text-[#fefeff] underline text-center">contact@charanravi.com</p>
+                      <div className="flex items-center gap-2 justify-center mt-4">
+                        <div className="relative">
+                          <div className="w-2 h-2 bg-[#fefeff] rounded-full animate-pulse"></div>
+                          <div className="absolute top-0 left-0 w-2 h-2 bg-[#fefeff] rounded-full animate-[ping_1.5s_ease-in-out_infinite] opacity-90"></div>
                         </div>
+                        <p className="text-l text-[#969696]">Looking for new opportunities.</p>
+                      </div>
+                      <div className="flex gap-8 pt-8 justify-center">
+                        <a
+                          href="https://www.linkedin.com/in/r-charan/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm"
+                        >
+                          LinkedIn
+                        </a>
+                        <a
+                          href="https://github.com/charanravi-online"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm"
+                        >
+                          GitHub
+                        </a>
+                        <a
+                          href="https://x.com/charanjson"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm"
+                        >
+                          X [Twitter]
+                        </a>
+                        <a
+                          href="https://instagram.com/charan.json"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm"
+                        >
+                          Instagram
+                        </a>
                       </div>
                     </div>
                   </motion.div>
@@ -609,8 +586,8 @@
               </main>
 
               {/* Footer */}
-              <footer className="px-4 md:px-24 py-8 text-[#969696] md:ml-16">
-                <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <footer className="px-4 md:px-24 py-8 text-[#969696]">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-4 max-w-5xl mx-auto">
                   <span className="text-sm text-center md:text-left">© 2025 Charan Ravi. All rights reserved.</span>
                   <div className="flex gap-4 md:gap-8">
                     <span className="text-sm text-center md:text-left">Design & Code by - <a href="/" className="hover:text-[#fefeff] transition-colors">Charan Ravi</a></span>
