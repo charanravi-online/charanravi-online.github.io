@@ -614,12 +614,12 @@
                           Blog
                         </a>
                         <a
-                          href="https://journal.charanravi.com"
+                          href="https://docs.charanravi.com"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm px-2 py-1"
                         >
-                          Journal
+                          Docs
                         </a>
                       </div>
                     </div>
