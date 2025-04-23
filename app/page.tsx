@@ -530,7 +530,7 @@
                         <div className="space-y-8">
                           <p className="text-sm text-[#fefeff]">
                             In my free time I try to challenge myself with new projects, learn new things, compose music,
-                            and solve some leetcode problems to keep my skills sharp and brain active.
+                            practice yoga, go for a long run or just kick back relax at a temple nearby.
                           </p>
                         </div>
                       </div>
@@ -539,7 +539,7 @@
                         <div className="space-y-8">
                           <p className="text-sm text-[#fefeff]">
                             Creating something from the ground up and watching it grow is incredibly fulfilling.
-                            Engaging in this process with passion feels almost spiritual to me.
+                            Engaging in this process with passion feels spiritual to me.
                           </p>
                         </div>
                       </div>
