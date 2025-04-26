@@ -7,6 +7,7 @@
   import { FcLinux } from "react-icons/fc";
   import { TbWorld } from "react-icons/tb";
   import { FaXTwitter } from "react-icons/fa6";
+  import Script from "next/script";
 
   const spaceGrotesk = Space_Grotesk({
     weight: ["400", "500", "600", "700"],
@@ -169,6 +170,17 @@
 
     return (
       <div className={`${spaceGrotesk.className} bg-black text-[#fefeff] flex flex-col min-h-screen`}>
+        {/* Google Analytics */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-KD6ZK493X5" />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-KD6ZK493X5');
+          `}
+        </Script>
+        
         <AnimatePresence mode="wait">
           {loading ? (
             <motion.div
@@ -620,6 +632,14 @@
                           className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm px-2 py-1"
                         >
                           Journal
+                        </a>
+                        <a
+                          href="https://cal.com/charanravi"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm px-2 py-1"
+                        >
+                          Meeting
                         </a>
                       </div>
                     </div>
