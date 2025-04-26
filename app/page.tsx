@@ -163,7 +163,12 @@
     };
 
     const handleLogoClick = () => {
-      window.location.reload();
+      // Toggle name expansion on mobile instead of refreshing the page
+      if (window.innerWidth < 768) {
+        setIsNameExpanded(!isNameExpanded);
+      } else {
+        window.location.reload();
+      }
     };
 
     const remainingLetters = "haran Ravi".split("");
