@@ -410,13 +410,7 @@
 
                 {/* Work Section */}
                 <section id="work" className="min-h-screen px-4 md:px-24 py-8 md:py-16 pt-20">
-                  <motion.div
-                    initial={{ y: 100, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                    className="max-w-5xl mx-auto"
-                  >
+                  <div className="max-w-5xl mx-auto">
                     <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-2xl">work.</h2>
                     <div className="grid gap-8 md:gap-16 max-w-2xl mx-auto">
                       {workProjects.map((project, index) => (
@@ -446,18 +440,12 @@
                         </motion.div>
                       ))}
                     </div>
-                  </motion.div>
+                  </div>
                 </section>
 
                 {/* Background Section */}
                 <section id="background" className="min-h-screen px-4 md:px-24 py-8 md:py-16 pt-20">
-                  <motion.div
-                    initial={{ y: 100, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                    className="max-w-5xl mx-auto"
-                  >
+                  <div className="max-w-5xl mx-auto">
                     <div className="max-w-2xl mx-auto">
                       <div className="relative w-48 h-40 flex-shrink-0 mb-4">
                         <Image
@@ -503,18 +491,12 @@
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 </section>
 
                 {/* About Section */}
                 <section id="about" className="min-h-screen px-4 md:px-24 py-8 md:py-16 pt-20">
-                  <motion.div
-                    initial={{ y: 100, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                    className="max-w-5xl mx-auto"
-                  >
+                  <div className="max-w-5xl mx-auto">
                     <h2 className="text-4xl md:text-7xl font-medium mb-8 max-w-4xl mx-auto">about.</h2>
                     <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                       <div>
@@ -561,18 +543,12 @@
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 </section>
 
                 {/* Contact Section */}
                 <section id="contact" className="min-h-screen px-4 md:px-24 py-8 md:py-16 pt-20">
-                  <motion.div
-                    initial={{ y: 100, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                    className="max-w-5xl mx-auto"
-                  >
+                  <div className="max-w-5xl mx-auto">
                     <div className="max-w-2xl mx-auto">
                       <Image
                         src="/charan.JPG"
@@ -648,7 +624,7 @@
                         </a>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 </section>
               </main>
 
