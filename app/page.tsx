@@ -551,7 +551,7 @@
                   <div className="max-w-5xl mx-auto">
                     <div className="max-w-2xl mx-auto">
                       <Image
-                        src="/charan.JPG"
+                        src="/charan.jpg"
                         alt="Charan Ravi"
                         width={500}
                         height={300}
