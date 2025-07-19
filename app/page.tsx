@@ -447,6 +447,28 @@
                 <section id="background" className="min-h-screen px-4 md:px-24 py-8 md:py-16 pt-20">
                   <div className="max-w-5xl mx-auto">
                     <div className="max-w-2xl mx-auto">
+                    <div className="mt-16">
+                        <div className="relative w-40 h-40 flex-shrink-0 mb-8">
+                          <Image
+                            src="/mvl_logo.png"
+                            alt="MVL Logo"
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            style={{ objectFit: "contain" }}
+                          />
+                        </div>
+                        <div className="space-y-4">
+                          <p className="font-mono text-sm text-[#969696]">MVL BLOCKCHAIN</p>
+                          <h3 className="text-4xl font-medium text-[#fefeff]">Automation Engineer</h3>
+                          <p className="text-sm text-[#fefeff]">NOW &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bangalore</p>
+                          <p className="text-sm text-[#969696]">
+                            Worked on creating framework to automate workflows for TADA, a ride hailing app that runs on Web3 mobility ecosystem utilizing MVL token.
+                          </p>
+                        </div>
+                      </div>
+                      <br/>
+                      <br/>
+                      <br/>
                       <div className="relative w-48 h-40 flex-shrink-0 mb-4">
                         <Image
                           src="/LGE_Logo_Mono_White_RGB_cropped.png"
@@ -459,7 +481,7 @@
                       <div className="space-y-4">
                         <p className="font-mono text-sm text-[#969696]">LG SOFT INDIA</p>
                         <h3 className="text-4xl font-medium text-[#fefeff]">Software Development Engineer in Test</h3>
-                        <p className="text-sm text-[#fefeff]">NOW &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bangalore</p>
+                        <p className="text-sm text-[#fefeff]">2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bangalore</p>
                         <p className="text-sm text-[#969696]">
                           I led a team to build an automation framework to test the LG AI Models, 
                           worked on the Open Source Edition of webOS (webOS OSE), and I am currently working 
@@ -563,7 +585,7 @@
                           <div className="w-2 h-2 bg-[#fefeff] rounded-full animate-pulse"></div>
                           <div className="absolute top-0 left-0 w-2 h-2 bg-[#fefeff] rounded-full animate-[ping_1.5s_ease-in-out_infinite] opacity-90"></div>
                         </div>
-                        <p className="text-l text-[#969696]">Looking for new opportunities.</p>
+                        <p className="text-l text-[#969696]">always checking my mail, so shoot me a mail for work/queries</p>
                       </div>
                       <div className="flex flex-wrap gap-4 md:gap-8 pt-8 justify-center">
                         <a
