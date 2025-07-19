@@ -462,7 +462,7 @@
                           <h3 className="text-4xl font-medium text-[#fefeff]">Automation Engineer</h3>
                           <p className="text-sm text-[#fefeff]">NOW &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bangalore</p>
                           <p className="text-sm text-[#969696]">
-                            Worked on creating framework to automate workflows for TADA, a ride hailing app that runs on Web3 mobility ecosystem utilizing MVL token.
+                            Creating frameworks to automate workflows for <a href="https://tada.global/" target="_blank" rel="noopener noreferrer" className="text-[#969696] hover:text-[#fefeff] transition-colors">TADA</a>, a ride hailing app that runs on Web3 mobility ecosystem utilizing MVL token.
                           </p>
                         </div>
                       </div>
@@ -484,7 +484,7 @@
                         <p className="text-sm text-[#fefeff]">2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bangalore</p>
                         <p className="text-sm text-[#969696]">
                           I led a team to build an automation framework to test the LG AI Models, 
-                          worked on the Open Source Edition of webOS (webOS OSE), and I am currently working 
+                          worked on the Open Source Edition of webOS (webOS OSE), and worked 
                           on firmware updates under the Home Applicance & Air Solution dept.
                         </p>
                       </div>
