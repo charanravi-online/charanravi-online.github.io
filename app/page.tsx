@@ -585,7 +585,7 @@
                           <div className="w-2 h-2 bg-[#fefeff] rounded-full animate-pulse"></div>
                           <div className="absolute top-0 left-0 w-2 h-2 bg-[#fefeff] rounded-full animate-[ping_1.5s_ease-in-out_infinite] opacity-90"></div>
                         </div>
-                        <p className="text-l text-[#969696]">always checking my mail, so shoot me a mail for work/queries</p>
+                        <p className="text-l text-[#969696]">status : active</p>
                       </div>
                       <div className="flex flex-wrap gap-4 md:gap-8 pt-8 justify-center">
                         <a
