@@ -66,7 +66,7 @@
       title: "Recruiters",
       description: (
         <>
-          Software developer with 3+ years of experience building software solutions. My expertise includes{" "}
+          Software developer with over 4 years of experience building software solutions. My expertise includes{" "}
           <span className="hover:text-[#3776AB] transition-colors cursor-default">Python</span>
           {", "}
           <span className="hover:text-[#F7DF1E] transition-colors cursor-default">JavaScript</span>
