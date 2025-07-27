@@ -524,7 +524,7 @@
                       <div>
                         <div className="space-y-8">
                           <p className="text-sm text-[#fefeff]">
-                          I'm a software developer based in India with over 3 years of experience across brand and product, 
+                          I'm a software developer based in India with over 4 years of experience across brand and product, 
                           at companies large and small.
                           I take pride in my craft, and love mentoring earlier career developers. 
                           I develop cross functional partnerships, and thrive in complex, ambiguous environments.
