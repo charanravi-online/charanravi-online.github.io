@@ -527,7 +527,7 @@
                           I'm a software developer based in India with over 4 years of experience across brand and product, 
                           at companies large and small.
                           I take pride in my craft, and love mentoring earlier career developers. 
-                          I develop cross functional partnerships, and thrive in complex, ambiguous environments.
+                          I develop cross functional partnerships, and thrive in complex environments.
                           </p>
                         </div>
                       </div>
