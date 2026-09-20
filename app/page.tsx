@@ -73,7 +73,7 @@
           {" "}etc.
         </>
       ),
-      skills: [<a href="https://drive.google.com/file/d/1Xu9YMnGVI0UzZkG-t2Eie5ZeZD6cnjxe/view?usp=sharing" download className="hover:text-[#fefeff] transition-colors">Download Resume</a>]
+      skills: [<a href="https://drive.google.com/file/d/1x7DYU2olaHCPsIJEb0vjcDhMyxu1jYSU/view?usp=sharing" download className="hover:text-[#fefeff] transition-colors">Download Resume</a>]
     },
     engineers: {
       title: "Engineers",
